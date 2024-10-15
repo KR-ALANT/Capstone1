@@ -194,10 +194,95 @@ main {
 }
 
 .accumulated-money{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 30px;
     width: 850px;
     height: 150px;
     border: 1px solid #000000;
+}
+
+.acc-money{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.available-reserve{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.reserve-use{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.coupon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px; 
+    margin-bottom: 10px;
+}
+
+.inquiry{
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    flex-direction: column;
+}
+
+.pointin{
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #fff;
+}
+
+.pointin:hover{
+    border: 1px solid #000000;
+}
+
+.couponin{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #fff;
+}
+
+.couponin:hover{
+    border: 1px solid #000000;
+}
+
+.total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.total-acc-money{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px; 
+    margin-bottom: 10px;
+}
+
+.total-order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px; 
+    margin-bottom: 10px; 
 }
 
 .order-processing-status{

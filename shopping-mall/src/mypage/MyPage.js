@@ -56,22 +56,50 @@ const MyPage = () => {
                     <p>mypage</p>
                 </div>
                 <div className = {styles["accumulated-money"]}>
-
+                    <div classNmae={styles["acc-money"]}>
+                        <div className={styles["available-reserve"]}>
+                            <p> 가용적립금 </p>
+                            <p> 원 </p>
+                        </div>
+                        <div className={styles["reserve-use"]}>
+                            <p> 사용적립금 </p>
+                            <p> 원 </p>
+                        </div>
+                        <div className={styles.coupon}>
+                            <p> 쿠폰 </p>
+                            <p> 개 </p>
+                        </div>
+                    </div>
+                    <div className={styles.inquiry}>
+                        <button  className={styles.pointin}> 조회 </button>
+                        <button className={styles.couponin}> 조회 </button>
+                    </div>
+                    <div className={styles.total}>
+                        <div className={styles["total-acc-money"]}>
+                            <p> 총적립금 </p>
+                            <p> 원 </p>
+                        </div>
+                        <div className={styles["total-order"]}>
+                            <p> 총주문 </p>
+                            <p> 원 </p>
+                            <p>( 회)</p>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles["order-processing-status"]}>
 
                 </div>
                 <div className={styles["every-page"]}>
-                    <div className={styles["order"]}>
+                    <div className={styles.order}>
 
                     </div>
-                    <div className={styles["profile"]}>
+                    <div className={styles.profile}>
 
                     </div>
-                    <div className={styles["wishlist"]}>
+                    <div className={styles.wishlist}>
 
                     </div>
-                    <div className={styles["board"]}>
+                    <div className={styles.board}>
 
                     </div>
                 </div>
