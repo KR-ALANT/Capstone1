@@ -11,7 +11,7 @@ const Main = () => {
     };
 
     return (
-        <div>
+        <div className = "back-img">
             <header>
                 <div className="menu-bar">
                     <input type="checkbox" id="menu-toggle" />

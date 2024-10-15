@@ -11,12 +11,19 @@
 body {
     font-family: 'Roboto Condensed';
     background-color: #121212;
-    background-image: url('../public/image/back.jpg');
     background-size: cover;
     min-height: 90vh;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
+}
+
+.back-img{
+    background-image: url('../public/image/back.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 92vh;
+    margin-top: -28px;
 }
 
 header {
@@ -35,7 +42,7 @@ header {
 .logo {
     width: 70px;
     position: absolute;
-    left: 830px;
+    left: 48%;
 }
 
 .menu-bar {
