@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import './Main.css';
 
@@ -8,6 +9,12 @@ const Main = () => {
 
     const toggleSearch = () => {
         setSearchActive(!searchActive);
+    };
+
+    const navigate = useNavigate();
+
+    const MyPage = () =>{
+        navigate("/MyPage")
     };
 
     return (
@@ -42,7 +49,7 @@ const Main = () => {
                 <div className="header-icons">
                     <a href="#" className="icon">join</a>
                     <a href="#" className="icon">login</a>
-                    <a href="#" className="icon">mypage</a>
+                    <a href="#" className="icon" onClick={MyPage}>mypage</a>
                     <a href="#" className="icon" onClick={toggleSearch}>search</a>
                     <a href="#" className="icon">cart</a>
                 </div>
