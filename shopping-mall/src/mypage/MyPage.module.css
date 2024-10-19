@@ -20,7 +20,7 @@
     box-sizing: border-box;
     font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
 }
-
+/*사이트 전체 배경*/
 .back-img{
     background-color: #9E9085;
     background-size: cover;
@@ -182,11 +182,13 @@ header {
     background-color: #555;
 }
 
+/*메인*/
 main{
     display: flex;
     justify-content: center;
 }
 
+/*My Page 및 그 아래의 내용 전체*/
 .main2{
     position: absolute;
     background-color: #9E9085;
@@ -195,6 +197,7 @@ main{
     margin-top: 70px;
 }
 
+/*My Page*/
 .mp{
     margin-top: 2%;
     font-size: 30px;
@@ -202,6 +205,7 @@ main{
     font-weight: bold;
 }
 
+/*가용적립금, 사용적립금, 쿠폰, 총적립금, 총주문*/
 .accumulated-money{
     display: flex;
     justify-content: space-around;
@@ -214,6 +218,7 @@ main{
     background-color: #1F1F1F;
 }
 
+/*가용적립금, 사용적립금, 쿠폰*/
 .acc-money{
     display: flex;
     justify-content: center;
@@ -221,6 +226,7 @@ main{
     flex-direction: column;
 }
 
+/*가용적립금*/
 .available-reserve{
     display: flex;
     justify-content: space-between;
@@ -229,6 +235,7 @@ main{
     margin-bottom: 10px;
 }
 
+/*사용적립금*/
 .reserve-use{
     display: flex;
     justify-content: space-between;
@@ -237,6 +244,7 @@ main{
     margin-bottom: 10px;
 }
 
+/*쿠폰*/
 .coupon{
     display: flex;
     justify-content: space-between;
@@ -245,6 +253,7 @@ main{
     margin-bottom: 10px;
 }
 
+/*쿠폰 버튼*/
 .coupon-button{
     background-color: rgba(0, 0, 0, 0);
     color: #fff;
@@ -254,6 +263,7 @@ main{
     cursor: pointer;
 }
 
+/*총적립금, 총주문*/
 .total{
     display: flex;
     justify-content: center;
@@ -261,6 +271,7 @@ main{
     flex-direction: column;
 }
 
+/*총적립금*/
 .total-acc-money{
     display: flex;
     justify-content: space-between;
@@ -269,6 +280,7 @@ main{
     margin-bottom: 10px;
 }
 
+/*총적립금 버튼*/
 .total-acc-money-button{
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -278,6 +290,7 @@ main{
     cursor: pointer;
 }
 
+/*총주문*/
 .total-order{
     display: flex;
     justify-content: space-between;
@@ -286,12 +299,14 @@ main{
     margin-bottom: 10px; 
 }
 
+/*원(회)*/
 .total-order-won{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*나의 주문 처리 현황, 입금전, 배송준비중, 배송중, 배송완료, 등급확인*/
 .order-processing-status{
     display: block;
     margin-left: 55px;
@@ -302,6 +317,7 @@ main{
     background-color: #1F1F1F;
 }
 
+/*나의 주문 처리 현황, 최근 3개월 기준*/
 .total-myorder{
     display:flex;
     justify-content: left;
@@ -311,84 +327,99 @@ main{
     margin-left: 20px;
 }
 
+/*나의 주문 처리 현황*/
 .myorder{
     font-family: 'GowunBatang-Regular';
     font-size: 18px;
 }
 
+/*3개월*/
 .thrmonth{
     text-decoration: underline;
 }
 
+/*입금전, 배송준비중, 배송중, 배송완료, 등급확인*/
 .total-delivery{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
+/*입금전 및 개수*/
 .before-delivery{
     width: 100px;
     height: 85px;
 }
 
+/*입금전*/
 .before-delivery-korean{
-   
     font-size: 18px;    
 }
 
+/*입금전 개수*/
 .before-delivery-number{
     font-weight: bold;
     font-size: 27px;
     margin-top: 15px;
 }
 
+/*배송준비중 및 개수*/
 .prepare-delivery{
     width: 100px;
     height: 85px;
 }
 
+/*배송준비중*/
 .prepare-delivery-korean{
    
     font-size: 18px; 
 }
 
+/*배송준비중 개수*/
 .prepare-delivery-number{
     font-weight: bold;
     font-size: 27px;
     margin-top: 15px;
 }
 
+/*배송중 및 개수*/
 .in-delivery{
     width: 100px;
     height: 85px;
 }
 
+/*배송중*/
 .in-delivery-korean{
     font-size: 18px; 
 }
 
+/*배송중 개수*/
 .in-delivery-number{
     font-weight: bold;
     font-size: 27px;
     margin-top: 15px;
 }
 
+/*배송완료 및 개수*/
 .complete-delivery{
     width: 100px;
     height: 85px;
 }
 
+/*배송완료*/
 .complete-delivery-korean{
     font-size: 18px; 
 }
 
+/*배송완료 개수*/
 .complete-delivery-number{
     font-weight: bold;
     font-size: 27px;
     margin-top: 15px;
 }
 
+/*등급확인*/
 .check-rating{
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -400,6 +431,7 @@ main{
     text-decoration: underline;
 }
 
+/*Order, Profile, Wishlist, Board*/
 .every-page{
     display: flex;
     justify-content: space-between;
@@ -410,6 +442,7 @@ main{
     height: 25%;
 }
 
+/*order 전체*/
 .order{
     display: flex;
     justify-content: center;
@@ -423,17 +456,20 @@ main{
     cursor: pointer;
 }
 
+/*order 호버시*/
 .order:hover{
     background-color: #1F1F1F;
     opacity: 80%;
 }
 
+/*Order*/
 .order-title{
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
+/*Order 설명*/
 .order-explanation{
     width: 125px;
     margin-top: 10px;
@@ -441,6 +477,7 @@ main{
     line-height: 130%;
 }
 
+/*Profile 전체*/
 .profile{
     display: flex;
     justify-content: center;
@@ -454,17 +491,20 @@ main{
     cursor: pointer;
 }
 
+/*Profile 호버시*/
 .profile:hover{
     background-color: #1F1F1F;
     opacity: 80%;
 }
 
+/*Profile*/
 .profile-title{
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
+/*Profile 설명*/
 .profile-explanation{
     width: 125px;
     margin-top: 10px;
@@ -472,6 +512,7 @@ main{
     line-height: 130%;
 }
 
+/*Wishlist 전체*/
 .wishlist{
     display: flex;
     justify-content: center;
@@ -485,17 +526,20 @@ main{
     cursor: pointer;
 }
 
+/*Wishlist 호버시*/
 .wishlist:hover{
     background-color: #1F1F1F;
     opacity: 80%;
 }
 
+/*Wishlist*/
 .wishlist-title{
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
+/*Wishlist 설명*/
 .wishlist-explanation{
     width: 125px;
     margin-top: 10px;
@@ -503,6 +547,7 @@ main{
     line-height: 130%;
 }
 
+/*Board 전체*/
 .board{
     display: flex;
     justify-content: center;
@@ -516,17 +561,20 @@ main{
     cursor: pointer;
 }
 
+/*Board 호버시*/
 .board:hover{
     background-color: #1F1F1F;
     opacity: 80%;
 }
 
+/*Board*/
 .board-title{
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
+/*Board 설명*/
 .board-explanation{
     width: 125px;
     margin-top: 10px;
