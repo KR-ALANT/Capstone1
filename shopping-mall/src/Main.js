@@ -5,9 +5,23 @@ import './Main.css';
 
 const Main = () => {
     const [searchActive, setSearchActive] = useState(false);
+    const [searchInput, setSearchInput] = useState(''); // 검색 입력 상태 추가
 
     const toggleSearch = () => {
         setSearchActive(!searchActive);
+        if (!searchActive) {
+            setSearchInput(''); // 검색란 초기화
+        }
+    };
+
+    const handleInputChange = (e) => {
+        setSearchInput(e.target.value);
+    };
+
+    const handleSearch = () => {
+        // 검색 처리 로직 추가 (필요한 경우)
+        console.log('Searching for:', searchInput);
+        setSearchInput(''); // 검색 후 초기화 (선택 사항)
     };
 
     return (
@@ -38,7 +52,9 @@ const Main = () => {
                         </div>
                     </nav>
                 </div>
-                <img src={`${process.env.PUBLIC_URL}/image/logo.png`} alt="Logo" className="logo" />
+                <Link to="/">
+                    <img src={`${process.env.PUBLIC_URL}/image/logo.png`} alt="Logo" className="logo" />
+                </Link>
                 <div className="header-icons">
                     <a href="#" className="icon">join</a>
                     <a href="#" className="icon">login</a>
@@ -48,8 +64,14 @@ const Main = () => {
                 </div>
             </header>
             <div className={`search-bar ${searchActive ? 'active' : ''}`}>
-                <input type="text" placeholder="Search..." className="search-input" />
-                <button className="search-btn">Search</button>
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    className="search-input"
+                    value={searchInput}
+                    onChange={handleInputChange} // 입력 변화 처리
+                />
+                <button className="search-btn" onClick={handleSearch}>Search</button>
                 <button className="back-btn" onClick={toggleSearch}>Back</button>
             </div>
             <main>

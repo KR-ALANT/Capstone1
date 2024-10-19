@@ -1,110 +1,193 @@
-/* index.css */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'EB Garamond', serif; /* 전체 프로젝트에 폰트 적용 */
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-    font-family: 'EB Garamond', serif; /* 기본 폰트 설정 */
+    background-color: #9E9085;
+    overflow: hidden;
+    font-family: 'ChosunSm', sans-serif;
 }
 
-/* 전체 컨테이너 */
-.inquiry-container {
-    padding: 50px;
-    background-color: #1f1f1f; /* 배경 색상 */
-    color: #ffffff; /* 글자 색상 */
-    min-height: 100vh; /* 최소 높이 */
-    display: flex; /* 플렉스 박스 사용 */
-    flex-direction: column; /* 세로 방향 정렬 */
-    align-items: left; /* 중앙 정렬 */
+.board-write-container {
+    width: 60%;
+    margin: 95px auto;
+    background-color: #B5B0A9;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 폼 스타일 */
-.inquiry-form {
-    display: flex; /* 플렉스 박스 사용 */
-    flex-direction: column; /* 세로 방향 정렬 */
-    gap: 25px; /* 각 입력 필드 간 간격 */
+.board-title {
+    font-size: 24px;
+    margin-left: 450px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: black;
+    font-family: 'EB Garamond', serif;
 }
 
-/* 제목과 내용 순서대로 출력 */
-.form-group {
-    display: flex; /* 플렉스 박스 사용 */
-    flex-direction: column; /* 세로 방향 정렬 */
-    gap: 10px; /* 내부 여백 */
+.board-title-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    background-color: #B5B0A9;
+    margin-bottom: 20px;
+    font-family: 'ChosunSm', sans-serif;
 }
 
-label {
-    font-size: 20px; /* 레이블 글자 크기 */
-    margin-bottom: 5px; /* 아래쪽 여백 */
-    font-weight: bold; /* 글자 두께 */
-    color: #444; /* 짙은 색상으로 레이블 강조 */
+.board-content-editor {
+    height: 420px; /* 고정된 높이 설정 */
+    margin-bottom: 60px;
+    color: #000;
+    font-family: 'ChosunSm', sans-serif;
 }
 
-/* 텍스트 입력 및 텍스트 영역 스타일 */
-input[type="text"], textarea {
-    padding: 15px; /* 내부 여백 */
-    border: 2px solid #ccc; /* 테두리 스타일 */
-    font-size: 13px; /* 글자 크기 */
-    background-color: #ffffff; /* 배경 색상 */
-    transition: border-color 0.3s ease; /* 테두리 색상 변화 애니메이션 */
+/* Quill 에디터의 컨텐츠 폰트 설정 */
+.ql-editor {
+    font-family: 'ChosunSm', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
 }
 
-input[type="text"]:focus, textarea:focus {
-    border-color: #666; /* 포커스 시 테두리 색상 변경 */
+.file-upload-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 2px;
 }
 
-/* 제목 입력 필드 */
-input[type="text"] {
-    width: 100%; /* 가로 폭 100% */
+.file-upload-button {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #9E9085; /* 버튼 텍스트 색상 */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* 버튼 텍스트 크기 */
+    position: relative; /* 위치 설정 */
+    overflow: hidden; /* 내용 넘침 숨기기 */
 }
 
-/* 내용 입력 필드 */
-textarea {
-    height: 450px; /* 글 작성 란 높이 설정 */
-    width: 100%; /* 가로 폭 100% */
-    resize: none; /* 크기 조절 불가 */
+.file-upload-button:hover {
+    background-color: #343a40; /* 호버 시 색상 변경 */
 }
 
-/* 이미지 업로드 섹션 */
-.image-upload {
-    display: flex; /* 플렉스 박스 사용 */
-    flex-direction: column; /* 세로 방향 정렬 */
-    align-items: flex-start; /* 왼쪽 정렬 */
-    cursor: pointer; /* 커서 변경 */
+.file-upload-button input[type="file"] {
+    display: none; /* 파일 선택 버튼 숨김 */
 }
 
-/* 버튼 그룹 스타일 */
-.button-group {
-    display: flex; /* 플렉스 박스 사용 */
-    justify-content: flex-end; /* 오른쪽 정렬 */
-    gap: 15px; /* 버튼 간 간격 추가 */
+.file-list {
+    margin: 10px 0;
 }
 
-/* 버튼 스타일 */
-.submit-btn, .cancel-btn {
-    padding: 10px 20px; /* 버튼 크기 증가 */
-    font-size: 13px; /* 글자 크기 증가 */
+.file-list ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-/* 버튼 호버 시 색상 변경 */
-.submit-btn:hover, .cancel-btn:hover {
-    background-color: grey; /* 호버 시 버튼 색상 변경 */
+.file-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-.warning {
-    color: red ;
+.delete-file-button {
+    margin-left: 10px;
+    background-color: #B5B0A9;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
 }
-/* 반응형 디자인 */
+
+.delete-file-button:hover {
+    background-color: #343a40;
+}
+
+.board-button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.submit-button, .cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'ChosunSm', sans-serif;
+}
+
+.submit-button {
+    background-color: #9E9085;
+    color: white;
+}
+
+.cancel-button {
+    background-color: #9E9085;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #343a40;
+}
+
+.cancel-button:hover {
+    background-color: #343a40;
+}
+
+/* 반응형 미디어 쿼리 */
+
+/* 작은 화면 (모바일) */
 @media (max-width: 768px) {
-    .inquiry-container {
-        width: 90%; /* 작은 화면에서 폭을 줄임 */
-        padding: 30px; /* 내부 여백 */
+    .board-write-container {
+        width: 90%;
+        margin: 20px auto;
     }
-    input[type="text"], textarea {
-        font-size: 14px; /* 글자 크기 조정 */
+
+    .board-title {
+        font-size: 20px;
+    }
+
+    .board-title-input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .board-content-editor {
+        height: 350px; /* 모바일에서의 높이 */
+    }
+
+    .submit-button, .cancel-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* 중간 화면 (태블릿) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .board-write-container {
+        width: 80%;
+        margin: 40px auto;
+    }
+
+    .board-title {
+        font-size: 22px;
+    }
+
+    .board-content-editor {
+        height: 400px; /* 태블릿에서의 높이 */
+    }
+
+    .submit-button, .cancel-button {
+        padding: 9px 18px;
+        font-size: 15px;
     }
 }
