@@ -25,7 +25,7 @@
     background-color: #9E9085;
     background-size: cover;
     background-position: center;
-    min-height: 94vh;
+    min-height: 94.3vh;
     margin-top: -28px;
 }
 
@@ -188,18 +188,9 @@ main{
     justify-content: center;
 }
 
-/*My Page 및 그 아래의 내용 전체*/
-.main2{
-    position: absolute;
-    background-color: #9E9085;
-    width: 1200px;
-    height: 80%;
-    margin-top: 70px;
-}
-
 /*My Page*/
 .mp{
-    margin-top: 2%;
+    margin-top: 70px;
     font-size: 30px;
     color: #1F1F1F;
     font-weight: bold;
@@ -210,10 +201,9 @@ main{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 2%;
-    margin-left: 55px;
-    width: 90%;
-    height: 25%;
+    margin-top: 20px;
+    width: 1080px;
+    height: 181.5px;
     border: 2px solid #B5B0A9;
     background-color: #1F1F1F;
 }
@@ -309,9 +299,8 @@ main{
 /*나의 주문 처리 현황, 입금전, 배송준비중, 배송중, 배송완료, 등급확인*/
 .order-processing-status{
     display: block;
-    margin-left: 55px;
-    width: 90%;
-    height: 25%;
+    width: 1080px;
+    height: 181.5px;
     margin-top: 2%;
     border: 2px solid #B5B0A9;
     background-color: #1F1F1F;
@@ -436,10 +425,9 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2%;
-    margin-left: 55px;
-    width: 90%;
-    height: 25%;
+    margin-top: 21px;
+    width: 1080px;
+    height: 181.5px;
 }
 
 /*order 전체*/
