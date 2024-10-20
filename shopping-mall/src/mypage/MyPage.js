@@ -1,5 +1,5 @@
-import {faClipboard, faAddressCard, faHeart} from '@fortawesome/free-regular-svg-icons'
-import {faClipboardCheck, faTicketSimple, faSackDollar } from '@fortawesome/free-solid-svg-icons';
+import { faClipboard, faAddressCard, faHeart} from '@fortawesome/free-regular-svg-icons'
+import { faClipboardCheck, faTicketSimple, faSackDollar } from '@fortawesome/free-solid-svg-icons';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -15,9 +15,9 @@ const MyPage = () => {
 
     const navigate = useNavigate();
 
-    const MyPage = () =>{
-        navigate("/MyPage")
-    };
+    const PointP = () => {
+        navigate("/Point")
+    }
 
     return (
         /*사이트 전체*/
@@ -51,7 +51,7 @@ const MyPage = () => {
                 <div className={styles["header-icons"]}>
                     <a href="#" className={styles.icon}>join</a>
                     <a href="#" className={styles.icon}>login</a>
-                    <a href="#" className={styles.icon} onClick={MyPage}>mypage</a>
+                    <a href="/MyPage" className={styles.icon} >mypage</a>
                     <a href="#" className={styles.icon} onClick={toggleSearch}>search</a>
                     <a href="#" className={styles.icon}>cart</a>
                 </div>
@@ -63,7 +63,7 @@ const MyPage = () => {
             </div>
             <main>
                 {/*My Page 및 그 아래의 내용 전체*/}
-                <div className = {styles.main2}>
+                <div>
                     {/*My Page*/}
                     <div className = {styles.mp}>
                         <p>My Page</p>
@@ -86,7 +86,7 @@ const MyPage = () => {
                             <div className={styles.coupon}>
                                 <p> 쿠폰 </p>
                                 {/*쿠폰 버튼*/}
-                                <button className={styles["coupon-button"]}>
+                                <button className={styles["coupon-button"]} onClick={PointP}>
                                     <FontAwesomeIcon icon={faTicketSimple} style={{width: "20px", height: "20px", marginRight: "120px"}}/>
                                 </button>
                                 <p> 개 </p>
