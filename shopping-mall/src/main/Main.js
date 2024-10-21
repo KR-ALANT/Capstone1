@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 import './Main.css';
 
 const Main = () => {
@@ -24,8 +24,16 @@ const Main = () => {
         setSearchInput(''); // 검색 후 초기화 (선택 사항)
     };
 
+    const navigate = useNavigate();
+
     return (
-        <div>
+        <div className="back-img"
+     style={{
+         backgroundImage: `url(${process.env.PUBLIC_URL}/image/back.jpg)`,
+         backgroundSize: 'cover',
+         height: '100vh',
+         overflow: 'hidden'
+     }}>
             <header>
                 <div className="menu-bar">
                     <input type="checkbox" id="menu-toggle" />
@@ -46,8 +54,8 @@ const Main = () => {
 
                             <div className="company">
                                 <span className="main-category">Q&A</span>
-                                <Link to="/ask" className="sub-category">Ask</Link>
-                                <a href="#" className="sub-category">FAQ</a>
+                                <a href="Ask" className="sub-category">Ask</a>
+                                <a href="Faq" className="sub-category">Faq</a>
                             </div>
                         </div>
                     </nav>
@@ -58,7 +66,7 @@ const Main = () => {
                 <div className="header-icons">
                     <a href="#" className="icon">join</a>
                     <a href="#" className="icon">login</a>
-                    <a href="#" className="icon">mypage</a>
+                    <a href="MyPage" className="icon">mypage</a>
                     <a href="#" className="icon" onClick={toggleSearch}>search</a>
                     <a href="#" className="icon">cart</a>
                 </div>

@@ -1,0 +1,535 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
+}
+
+.back-img{
+    background-color: #9E9085;
+    background-size: cover;
+    background-position: center;
+    min-height: 94vh;
+    margin-top: -28px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 70px;
+    position: absolute;
+    left: 48%;
+}
+
+.menu-bar {
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #333333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+}
+
+#menu-toggle:checked ~ .menu {
+    left: 0;
+}
+
+.menu-top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-icon {
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 250px;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: grey;
+    margin: 20px 0;
+}
+
+.menu-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-category {
+    font-size: 19px;
+    color: #ffffff;
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+.sub-category {
+    font-size: 17px;
+    color: #ffffff;
+    margin: 10px 0;
+    text-decoration: none; /* 기본 밑줄 없음 */
+    display: block;
+    padding-left: 5px;
+    line-height: 1.6;
+}
+
+.sub-category:hover {
+    text-decoration: underline; /* hover 시 밑줄 추가 */
+}
+
+.header-icons .icon {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.header-icons .icon:hover {
+    text-decoration: underline; /* hover 시 밑줄 추가 */
+}
+
+/* Search bar styles */
+.search-bar {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 998;
+}
+
+.search-bar.active {
+    top: 50px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-btn, .back-btn {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-btn:hover, .back-btn:hover {
+    background-color: #555;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.main2{
+    position: absolute;
+    background-color: #9E9085;
+    width: 1200px;
+    height: 80%;
+    margin-top: 70px;
+}
+
+.mp{
+    margin-top: 2%;
+    font-size: 30px;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+.accumulated-money{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 55px;
+    width: 90%;
+    height: 25%;
+    border: 2px solid #B5B0A9;
+    background-color: #1F1F1F;
+}
+
+.acc-money{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.available-reserve{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.reserve-use{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.coupon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.coupon-button{
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    width: 20px;
+    margin-right: 120px;
+    border: none;
+    cursor: pointer;
+}
+
+.total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.total-acc-money{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px; 
+    margin-bottom: 10px;
+}
+
+.total-acc-money-button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #fff;
+    width: 25px;
+    margin-right: 90px;
+    cursor: pointer;
+}
+
+.total-order{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px; 
+    margin-bottom: 10px; 
+}
+
+.total-order-won{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-processing-status{
+    display: block;
+    margin-left: 55px;
+    width: 90%;
+    height: 25%;
+    margin-top: 2%;
+    border: 2px solid #B5B0A9;
+    background-color: #1F1F1F;
+}
+
+.total-myorder{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.myorder{
+    font-family: 'GowunBatang-Regular';
+    font-size: 18px;
+}
+
+.thrmonth{
+    text-decoration: underline;
+}
+
+.total-delivery{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.before-delivery{
+    width: 100px;
+    height: 85px;
+}
+
+.before-delivery-korean{
+   
+    font-size: 18px;    
+}
+
+.before-delivery-number{
+    font-weight: bold;
+    font-size: 27px;
+    margin-top: 15px;
+}
+
+.prepare-delivery{
+    width: 100px;
+    height: 85px;
+}
+
+.prepare-delivery-korean{
+   
+    font-size: 18px; 
+}
+
+.prepare-delivery-number{
+    font-weight: bold;
+    font-size: 27px;
+    margin-top: 15px;
+}
+
+.in-delivery{
+    width: 100px;
+    height: 85px;
+}
+
+.in-delivery-korean{
+    font-size: 18px; 
+}
+
+.in-delivery-number{
+    font-weight: bold;
+    font-size: 27px;
+    margin-top: 15px;
+}
+
+.complete-delivery{
+    width: 100px;
+    height: 85px;
+}
+
+.complete-delivery-korean{
+    font-size: 18px; 
+}
+
+.complete-delivery-number{
+    font-weight: bold;
+    font-size: 27px;
+    margin-top: 15px;
+}
+
+.check-rating{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.every-page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: 55px;
+    width: 90%;
+    height: 25%;
+}
+
+.order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 230px;
+    height: 100%;
+    border: 2px solid #B5B0A9;
+    background-color: #1F1F1F;
+    color:#fff;
+    cursor: pointer;
+}
+
+.order:hover{
+    background-color: #1F1F1F;
+    opacity: 80%;
+}
+
+.order-title{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.order-explanation{
+    width: 125px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 130%;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 230px;
+    height: 100%;
+    border: 2px solid #B5B0A9;
+    background-color: #1F1F1F;
+    color:#fff;
+    cursor: pointer;
+}
+
+.profile:hover{
+    background-color: #1F1F1F;
+    opacity: 80%;
+}
+
+.profile-title{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.profile-explanation{
+    width: 125px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 130%;
+}
+
+.wishlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 230px;
+    height: 100%;
+    border: 2px solid #B5B0A9;
+    background-color: #1F1F1F;
+    color:#fff;
+    cursor: pointer;
+}
+
+.wishlist:hover{
+    background-color: #1F1F1F;
+    opacity: 80%;
+}
+
+.wishlist-title{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.wishlist-explanation{
+    width: 125px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 130%;
+}
+
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 230px;
+    height: 100%;
+    border: 2px solid #B5B0A9;
+    background-color: #1F1F1F;
+    color:#fff;
+    cursor: pointer;
+}
+
+.board:hover{
+    background-color: #1F1F1F;
+    opacity: 80%;
+}
+
+.board-title{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.board-explanation{
+    width: 125px;
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 130%;
+}

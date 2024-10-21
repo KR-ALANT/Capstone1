@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom'; // useNavigate 추가
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './Ask.css'; // 스타일링 파일
+
+const MAX_CONTENT_LENGTH = 800; // 최대 글자 수
 
 const Ask = () => {
     const [title, setTitle] = useState('');
@@ -10,49 +12,66 @@ const Ask = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [searchActive, setSearchActive] = useState(false);
     const [imageFiles, setImageFiles] = useState([]);
-    const [fileName, setFileName] = useState('');
+    const [contentLength, setContentLength] = useState(0); // 글자 수 상태 추가
+    const fileInputRef = useRef(null);  // 파일 입력 필드 참조
 
     const handleTitleChange = (e) => {
         setTitle(e.target.value);
     };
 
     const handleContentChange = (value) => {
+        const textLength = value.replace(/<[^>]+>/g, '').length; // HTML 태그를 제외한 실제 텍스트 길이 체크
+        if (textLength > MAX_CONTENT_LENGTH) {
+            setErrorMessage(`내용은 최대 ${MAX_CONTENT_LENGTH}자까지만 입력할 수 있습니다.`);
+            return;
+        }
+
         setContent(value);
+        setContentLength(textLength);
+        setErrorMessage('');
     };
 
     const handleFileRemove = (index) => {
-        const updatedFiles = imageFiles.filter((_, i) => i !== index);
-        setImageFiles(updatedFiles);
-        
-        // 파일 삭제 후 파일 이름 업데이트
-        if (updatedFiles.length > 0) {
-            setFileName(updatedFiles.map(file => file.name).join(', '));
-        } else {
-            setFileName(''); // 파일이 없을 경우 파일명을 빈 문자열로 설정
-        }
+        setImageFiles((prevFiles) => {
+            const updatedFiles = prevFiles.filter((_, i) => i !== index);
+            
+            // 모든 파일이 삭제되었을 때 파일 입력 필드를 리셋
+            if (updatedFiles.length === 0 && fileInputRef.current) {
+                fileInputRef.current.value = null;  // 파일 입력 필드 초기화
+            }
+
+            return updatedFiles;
+        });
     };
 
     const handleFileChange = (e) => {
         const files = Array.from(e.target.files);
+        if (imageFiles.length + files.length > 3) {
+            setErrorMessage('최대 3개의 파일만 첨부할 수 있습니다.');
+            return;
+        }
         setImageFiles((prevFiles) => [...prevFiles, ...files]);
-        setFileName((prevFiles) => prevFiles.length ? prevFiles.map(file => file.name).join(', ') + ', ' + files.map(file => file.name).join(', ') : files.map(file => file.name).join(', '));
+        setErrorMessage('');
     };
 
     const handleSubmit = () => {
-        // 제목이나 내용이 비어 있을 때 경고 문구를 표시
         if (title.trim() === '' || content.trim() === '') {
             setErrorMessage('제목과 내용을 모두 입력해주세요.');
             return;
         }
 
-        setErrorMessage('');  // 에러 메시지 초기화
+        setErrorMessage('');
         console.log('작성하기 클릭:', { title, content, imageFiles });
-        // 작성 로직 추가
     };
 
     const handleCancel = () => {
         console.log('취소 클릭');
-        // 취소 로직 추가
+        setTitle('');
+        setContent('');
+        setImageFiles([]);
+        if (fileInputRef.current) {
+            fileInputRef.current.value = null;  // 파일 입력 필드 초기화
+        }
     };
 
     const toggleSearch = () => {
@@ -70,7 +89,7 @@ const Ask = () => {
     };
 
     return (
-        <div>
+        <div className="back-img1">
             <header>
                 <div className="menu-bar">
                     <input type="checkbox" id="menu-toggle" />
@@ -108,6 +127,7 @@ const Ask = () => {
                     <a href="#" className="icon">cart</a>
                 </div>
             </header>
+
             <div className={`search-bar ${searchActive ? 'active' : ''}`}>
                 <input type="text" placeholder="Search..." className="search-input" />
                 <button className="search-btn">Search</button>
@@ -124,31 +144,39 @@ const Ask = () => {
                     onChange={handleTitleChange}
                 />
                 <ReactQuill 
-                    value={content}
+                    value={content} 
                     onChange={handleContentChange}
                     modules={modules}
                     placeholder="내용을 입력해주세요."
-                    className="board-content-editor"
+                    className="board-content-editor-quill-editor"
                 />
-                
-                {/* 첨부된 이미지 파일 목록 표시 및 삭제 버튼 */}
-                <div className="file-attachment">
+                <div className="max-content">
+                <p>{contentLength} / {MAX_CONTENT_LENGTH}자</p> {/* 글자 수 표시 */}
+                </div>
+
+                <div className="file-upload-container">
                     <input 
                         type="file"
                         accept="image/*"
-                        multiple
                         onChange={handleFileChange}
-                        style={{ display: 'none' }} // 파일 입력은 숨김
                         id="file-upload"
+                        multiple
+                        ref={fileInputRef}  // 파일 입력 필드 참조
                     />
-                    <button htmlFor="file-upload">파일선택</button>
-                    <span className="file-name">{fileName}</span>
-                    {imageFiles.length > 0 && (
-                        <button onClick={() => handleFileRemove(0)}>삭제</button>
-                    )}
+                    <label htmlFor="file-upload" className="file-upload-button"></label>
                 </div>
                 
-                {/* 에러 메시지 표시 */}
+                {imageFiles.length > 0 && (
+                    <div className="file-list">
+                        {imageFiles.map((file, index) => (
+                            <div key={index} className="file-item">
+                                <span>{file.name}</span>
+                                <button onClick={() => handleFileRemove(index)} className="delete-file-button">삭제</button>
+                            </div>
+                        ))}
+                    </div>
+                )}
+                
                 {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
                 
                 <div className="board-button-group">
