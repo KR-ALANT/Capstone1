@@ -1,31 +1,31 @@
 /* index.css */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'EB Garamond', serif; /* 전체 프로젝트에 폰트 적용 */
+    font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
 }
-
-body {
-    font-family: 'Roboto Condensed';
-    background-size: cover;
-    min-height: 90vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-    -ms-overflow-sytle:none;
-}::-webkit-scrollbar{
-    display: none;
-}
-
+/*사이트 전체 배경*/
 .back-img{
-    background-image: url("../public/image/back.jpg");
+    background-color: #9E9085;
     background-size: cover;
     background-position: center;
-    min-height: 94vh;
+    min-height: 94.3vh;
     margin-top: -28px;
 }
 
@@ -34,7 +34,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 25px;
-    background-color: #1f1f1f;
     position: fixed;
     top: 0;
     left: 0;
@@ -180,9 +179,4 @@ header {
 
 .search-btn:hover, .back-btn:hover {
     background-color: #555;
-}
-
-main {
-    margin-top: 80px;
-    text-align: center;
 }

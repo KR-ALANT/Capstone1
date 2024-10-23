@@ -1,0 +1,151 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    background-color: #E8E8E8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 90px;
+    position: absolute;
+    left: 47.5%;
+    top: -17px;
+    opacity: 80%;
+}
+
+.menu-bar {
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    background-color: #E8E8E8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+    box-shadow: 1px 2px 8px #00000029; 
+}
+
+#menu-toggle:checked ~ .menu {
+    left: 0;
+}
+
+.menu-top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-icon {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    margin-left: 200px;
+}
+
+.menu-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-category {
+    font-size: 19px;
+    color: #000;
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+.sub-category {
+    font-size: 17px;
+    color: #000;
+    margin: 10px 0;
+    text-decoration: none; /* 기본 밑줄 없음 */
+    display: block;
+    padding-left: 5px;
+    line-height: 1.6;
+}
+
+.sub-category:hover {
+    text-decoration: underline; /* hover 시 밑줄 추가 */
+}
+
+.header-icons .icon {
+    color: #000;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.header-icons .icon:hover {
+    text-decoration: underline; /* hover 시 밑줄 추가 */
+}
+
+/* Search bar styles */
+.search-bar {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 998;
+}
+
+.search-bar.active {
+    top: 50px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-btn, .back-btn {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-btn:hover, .back-btn:hover {
+    background-color: #555;
+}

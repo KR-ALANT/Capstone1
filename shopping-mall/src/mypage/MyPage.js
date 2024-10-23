@@ -1,66 +1,26 @@
 import { faClipboard, faAddressCard, faHeart} from '@fortawesome/free-regular-svg-icons'
 import { faClipboardCheck, faTicketSimple, faSackDollar } from '@fortawesome/free-solid-svg-icons';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from'./MyPage.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Header from '../header/Header.js'
 
 const MyPage = () => {
-    const [searchActive, setSearchActive] = useState(false);
-
-    const toggleSearch = () => {
-        setSearchActive(!searchActive);
-    };
-
     const navigate = useNavigate();
 
     const PointP = () => {
         navigate("/Point")
     }
 
+    const MyCoupon = () => {
+        navigate("/Coupon")
+    }
+
     return (
         /*사이트 전체*/
         <div className={styles["back-img"]}>
-            <header>
-                <div className={styles["menu-bar"]}>
-                    <input type="checkbox" id="menu-toggle" />
-                    <label htmlFor="menu-toggle" className={styles["menu-icon"]}>&#9776;</label>
-                    <nav className="menu">
-                        <label htmlFor="menu-toggle" className={styles["close-icon"]}>X</label>
-                        <div className={styles["menu-bottom"]}>
-                            <div className={styles["shop"]}>
-                                <span className={styles["main-category"]}>SHOP</span>
-                                <a href="#" className={styles["sub-category"]}>All</a>
-                                <a href="#" className={styles["sub-category"]}>Best</a>
-                                <a href="#" className={styles["sub-category"]}>New</a>
-                                <a href="#" className={styles["sub-category"]}>Outer</a>
-                                <a href="#" className={styles["sub-category"]}>Top</a>
-                                <a href="#" className={styles["sub-category"]}>Bottom</a>
-                                <a href="#" className={styles["sub-category"]}>Etc</a>
-                            </div>
-                            <div className={styles.company}>
-                                <span className={styles["main-category"]}>Q&A</span>
-                                <Link to="/ask" className={styles["sub-category"]}>Ask</Link>
-                                <a href="#" className={styles["sub-category"]}>FAQ</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-                <img src={`${process.env.PUBLIC_URL}/image/logo.png`} alt="Logo" className={styles.logo} />
-                <div className={styles["header-icons"]}>
-                    <a href="#" className={styles.icon}>join</a>
-                    <a href="#" className={styles.icon}>login</a>
-                    <a href="/MyPage" className={styles.icon} >mypage</a>
-                    <a href="#" className={styles.icon} onClick={toggleSearch}>search</a>
-                    <a href="#" className={styles.icon}>cart</a>
-                </div>
-            </header>
-            <div className={`search-bar ${searchActive ? 'active' : ''}`}>
-                <input type="text" placeholder="Search..." className={styles["search-input"]} />
-                <button className={styles["search-btn"]}>Search</button>
-                <button className={styles["back-btn"]} onClick={toggleSearch}>Back</button>
-            </div>
+            <Header />
             <main>
                 {/*My Page 및 그 아래의 내용 전체*/}
                 <div>
@@ -86,8 +46,8 @@ const MyPage = () => {
                             <div className={styles.coupon}>
                                 <p> 쿠폰 </p>
                                 {/*쿠폰 버튼*/}
-                                <button className={styles["coupon-button"]} onClick={PointP}>
-                                    <FontAwesomeIcon icon={faTicketSimple} style={{width: "20px", height: "20px", marginRight: "120px"}}/>
+                                <button className={styles["coupon-button"]}>
+                                    <FontAwesomeIcon icon={faTicketSimple} style={{width: "20px", height: "20px", color: "black", marginRight: "120px"}} onClick={MyCoupon}/>
                                 </button>
                                 <p> 개 </p>
                             </div>
@@ -99,7 +59,7 @@ const MyPage = () => {
                                 <p> 총적립금 </p>
                                 {/*총적립금 버튼*/}
                                 <button className={styles["total-acc-money-button"]}>
-                                    <FontAwesomeIcon icon={faSackDollar} style={{width: "20px", height: "20px"}} />
+                                    <FontAwesomeIcon icon={faSackDollar} style={{width: "20px", height: "20px", color: "black"}}  onClick={PointP}/>
                                 </button>
                                 <p> 원 </p>
                             </div>

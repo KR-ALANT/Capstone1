@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import './Main.css';
+import './Header.css';
 
-const Main = () => {
+const Header = () => {
     const [searchActive, setSearchActive] = useState(false);
 
     const toggleSearch = () => {
@@ -11,7 +11,7 @@ const Main = () => {
     };
 
     return (
-        <div className = "back-img">
+        <div>
             <header>
                 <div className="menu-bar">
                     <input type="checkbox" id="menu-toggle" />
@@ -52,10 +52,8 @@ const Main = () => {
                 <button className="search-btn">Search</button>
                 <button className="back-btn" onClick={toggleSearch}>Back</button>
             </div>
-            <main>
-            </main>
         </div>
     );
 };
 
-export default Main;
+export default Header;
