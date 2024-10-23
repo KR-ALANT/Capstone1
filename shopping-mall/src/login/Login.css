@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
+}
+/*사이트 전체 배경*/
+.back-img{
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    min-height: 94vh;
+    margin-top: -28px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 70px;
+    position: absolute;
+    left: 48%;
+}
+
+.menu-bar {
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #333333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+}
+
+#menu-toggle:checked ~ .menu {
+    left: 0;
+}
+
+.menu-top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-icon {
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 250px;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: grey;
+    margin: 20px 0;
+}
+
+.menu-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main-category {
+    font-size: 19px;
+    color: #ffffff;
+    margin: 10px 0;
+    text-decoration: underline;
+}
+
+.sub-category {
+    font-size: 17px;
+    color: #ffffff;
+    margin: 10px 0;
+    text-decoration: none; /* 기본 밑줄 없음 */
+    display: block;
+    padding-left: 5px;
+    line-height: 1.6;
+}
+
+.sub-category:hover {
+    text-decoration: underline; /* hover 시 밑줄 추가 */
+}
+
+.header-icons .icon {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.header-icons .icon:hover {
+    text-decoration: underline; /* hover 시 밑줄 추가 */
+}
+
+/* Search bar styles */
+.search-bar {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: top 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 998;
+}
+
+.search-bar.active {
+    top: 50px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-btn, .back-btn {
+    padding: 10px 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-btn:hover, .back-btn:hover {
+    background-color: #555;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.login{
+    position: fixed;
+    top: 240px;
+    font-size: 25px;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+.inputs{
+    position: fixed;
+    top: 280px;
+    width: 300px;
+}
+
+.login_input{
+    margin-bottom: 10px;
+}
