@@ -14,12 +14,18 @@
     font-style: normal;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
+}
+
 /*메인*/
 main{
     display: flex;
     justify-content: center;
 }
-
 
 /*My Page*/
 .mp{
