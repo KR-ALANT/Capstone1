@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import './Main.css';
+import './Header.css';
 
-const Main = () => {
+const Header = () => {
     const [searchActive, setSearchActive] = useState(false);
     const [searchInput, setSearchInput] = useState(''); // 검색 입력 상태 추가
 
@@ -24,7 +23,6 @@ const Main = () => {
         setSearchInput(''); // 검색 후 초기화 (선택 사항)
     };
 
-    const navigate = useNavigate();
 
     return (
         <div className="back-img"
@@ -55,7 +53,7 @@ const Main = () => {
                             <div className="company">
                                 <span className="main-category">Q&A</span>
                                 <a href="Ask" className="sub-category">Ask</a>
-                                <a href="Faq" className="sub-category">Faq</a>
+                                <a href="Faq" className="sub-category">FAQ</a>
                             </div>
                         </div>
                     </nav>
@@ -88,4 +86,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default Header;
