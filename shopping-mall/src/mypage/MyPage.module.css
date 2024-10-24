@@ -14,6 +14,7 @@
     font-style: normal;
 }
 
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -182,11 +183,14 @@ header {
     background-color: #555;
 }
 
+=======
+>>>>>>> 970dae8b44af435cc464b04c0fd09de312ab96c9
 /*메인*/
 main{
     display: flex;
     justify-content: center;
 }
+
 
 /*My Page*/
 .mp{
@@ -201,11 +205,14 @@ main{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
-    width: 1080px;
+    margin-top: 50px;
+    width: 1400px;
     height: 181.5px;
-    border: 2px solid #B5B0A9;
-    background-color: #1F1F1F;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    background-color: #fff;
+    color: #1F1F1F;
+    font-size: 18px;
 }
 
 /*가용적립금, 사용적립금, 쿠폰*/
@@ -223,6 +230,7 @@ main{
     align-items: center;
     width: 200px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /*사용적립금*/
@@ -232,6 +240,7 @@ main{
     align-items: center;
     width: 200px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /*쿠폰*/
@@ -241,6 +250,7 @@ main{
     align-items: center;
     width: 200px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /*쿠폰 버튼*/
@@ -268,6 +278,7 @@ main{
     align-items: center;
     width: 200px; 
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 /*총적립금 버튼*/
@@ -287,6 +298,7 @@ main{
     align-items: center;
     width: 200px; 
     margin-bottom: 10px; 
+    font-weight: bold;
 }
 
 /*원(회)*/
@@ -298,12 +310,17 @@ main{
 
 /*나의 주문 처리 현황, 입금전, 배송준비중, 배송중, 배송완료, 등급확인*/
 .order-processing-status{
-    display: block;
-    width: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 1400px;
     height: 181.5px;
-    margin-top: 2%;
-    border: 2px solid #B5B0A9;
-    background-color: #1F1F1F;
+    margin-top: 80px;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    color: #000;
+    font-weight: bold;
 }
 
 /*나의 주문 처리 현황, 최근 3개월 기준*/
@@ -312,8 +329,7 @@ main{
     justify-content: left;
     align-items: center;
     font-size: 13px;
-    margin-top: 10px;
-    margin-left: 20px;
+    width: 97%;
 }
 
 /*나의 주문 처리 현황*/
@@ -333,6 +349,7 @@ main{
     justify-content: space-around;
     align-items: center;
     margin-top: 30px;
+    width: 80%;
 }
 
 /*입금전 및 개수*/
@@ -343,7 +360,7 @@ main{
 
 /*입금전*/
 .before-delivery-korean{
-    font-size: 18px;    
+    font-size: 20px;    
 }
 
 /*입금전 개수*/
@@ -361,8 +378,7 @@ main{
 
 /*배송준비중*/
 .prepare-delivery-korean{
-   
-    font-size: 18px; 
+    font-size: 20px; 
 }
 
 /*배송준비중 개수*/
@@ -380,7 +396,7 @@ main{
 
 /*배송중*/
 .in-delivery-korean{
-    font-size: 18px; 
+    font-size: 20px; 
 }
 
 /*배송중 개수*/
@@ -398,7 +414,7 @@ main{
 
 /*배송완료*/
 .complete-delivery-korean{
-    font-size: 18px; 
+    font-size: 20px; 
 }
 
 /*배송완료 개수*/
@@ -412,10 +428,10 @@ main{
 .check-rating{
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    color: white;
-    font-size: 16px;
-    margin-bottom: 20px;
-    margin-right: 10px;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 35px;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -425,8 +441,8 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 21px;
-    width: 1080px;
+    margin-top: 80px;
+    width: 1400px;
     height: 181.5px;
 }
 
@@ -436,18 +452,20 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 230px;
+    width: 270px;
     height: 100%;
-    border: 2px solid #B5B0A9;
-    background-color: #1F1F1F;
-    color:#fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: none;
+    border-left: none;
+    background-color: white;
+    color:#000;
     cursor: pointer;
 }
 
 /*order 호버시*/
 .order:hover{
-    background-color: #1F1F1F;
-    opacity: 80%;
+    background-color: #F1F1F1;
 }
 
 /*Order*/
@@ -459,9 +477,9 @@ main{
 
 /*Order 설명*/
 .order-explanation{
-    width: 125px;
+    width: 130px;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 130%;
 }
 
@@ -471,18 +489,20 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 230px;
+    width: 270px;
     height: 100%;
-    border: 2px solid #B5B0A9;
-    background-color: #1F1F1F;
-    color:#fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: none;
+    border-left: none;
+    background-color: white;
+    color:#000;
     cursor: pointer;
 }
 
 /*Profile 호버시*/
 .profile:hover{
-    background-color: #1F1F1F;
-    opacity: 80%;
+    background-color: #F1F1F1;
 }
 
 /*Profile*/
@@ -494,9 +514,9 @@ main{
 
 /*Profile 설명*/
 .profile-explanation{
-    width: 125px;
+    width: 130px;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 130%;
 }
 
@@ -506,18 +526,20 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 230px;
+    width: 270px;
     height: 100%;
-    border: 2px solid #B5B0A9;
-    background-color: #1F1F1F;
-    color:#fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: none;
+    border-left: none;
+    background-color: white;
+    color:#000;
     cursor: pointer;
 }
 
 /*Wishlist 호버시*/
 .wishlist:hover{
-    background-color: #1F1F1F;
-    opacity: 80%;
+    background-color: #F1F1F1;
 }
 
 /*Wishlist*/
@@ -529,9 +551,9 @@ main{
 
 /*Wishlist 설명*/
 .wishlist-explanation{
-    width: 125px;
+    width: 140px;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 130%;
 }
 
@@ -541,18 +563,20 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 230px;
+    width: 270px;
     height: 100%;
-    border: 2px solid #B5B0A9;
-    background-color: #1F1F1F;
-    color:#fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-right: none;
+    border-left: none;
+    background-color: white;
+    color:#000;
     cursor: pointer;
 }
 
 /*Board 호버시*/
 .board:hover{
-    background-color: #1F1F1F;
-    opacity: 80%;
+    background-color: #F1F1F1;
 }
 
 /*Board*/
@@ -564,8 +588,8 @@ main{
 
 /*Board 설명*/
 .board-explanation{
-    width: 125px;
+    width: 130px;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 130%;
 }

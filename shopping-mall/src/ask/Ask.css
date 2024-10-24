@@ -7,7 +7,7 @@
 }
 
 .back-img1{
-    background-color: #9E9085;
+    background-color: #ffffff;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -15,15 +15,16 @@
 }
 
 .board-write-container {
+    position: absolute;
+    left: 240px;
     width: 60%;
     height: 100%;
-    margin: 95px auto;
-    padding: 10px;
+    margin: 100px auto;
 }
 
 .board-title {
     font-size: 24px;
-    margin-left: 470px;
+    margin-left: 585px;
     margin-bottom: 10px;
     font-weight: bold;
     color: black;
@@ -31,18 +32,19 @@
 }
 
 .board-title-input {
-    width: 100%;
+    width: 120%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
-    background-color: #B5B0A9;
+    border: 1px solid #cccbcb;
+    background-color: #E8E8E8;
     margin-bottom: 20px;
     font-family: 'ChosunSm', sans-serif;
 }
 
 .board-content-editor-quill-editor {
-    background-color: #B5B0A9;
+    background-color: #E8E8E8;
     height: 400px;
+    width: 120%;
     margin-bottom: 50px;
 }
 
@@ -51,7 +53,7 @@
     font-family: 'ChosunSm', sans-serif;
     font-size: 16px;
     color: #000;
-    background-color: #B5B0A9;
+    background-color: #E8E8E8;
 }
 
 .file-upload-container {
@@ -65,6 +67,7 @@
     margin: 10px 0;
     display: flex; /* 가로 나열 */
     flex-wrap: wrap; /* 필요에 따라 줄바꿈 허용 */
+    color: #000;
 }
 
 .file-item {
@@ -82,7 +85,7 @@
 .delete-file-button {
     margin-left: 10px;
     padding: 2px 5px;
-    background-color: #1F1F1F; /* 삭제 버튼 색상 */
+    background-color: #000; /* 삭제 버튼 색상 */
     color: white;
     border: none;
     border-radius: 4px;
@@ -95,35 +98,40 @@
 }
 
 .submit-button {
-    padding: 10px 20px;
-    color: #000;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.submit-button {
     position: absolute;
-    left: 69.5%;
-    top: 82%;
-    background-color: #B5B0A9; /* 제출 버튼 색상 */
+    left: 103.5%;
+    top: 69%;
+    background-color: #E8E8E8; /* 제출 버튼 색상 */
+    width: 90px;
+    text-align: center;
     padding: 10px 20px;
     color: #000;
     font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    white-space: nowrap;
+}
+
+.submit-button:hover {
+    background-color: #c5c5c5;
 }
 
 .cancel-button {
     position: absolute;
-    left: 75.5%;
-    top: 82%;
-    background-color: #B5B0A9; /* 취소 버튼 색상 */
+    left: 113.8%;
+    top: 69%;
+    background-color: #E8E8E8; /* 취소 버튼 색상 */
     padding: 10px 20px;
     color: #000;
     font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    white-space: nowrap;
 }
+
+.cancel-button:hover {
+    background-color: #c5c5c5;
+}
+

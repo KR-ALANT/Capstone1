@@ -1,31 +1,12 @@
 /* index.css */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'EB Garamond', serif; /* 전체 프로젝트에 폰트 적용 */
-}
-
-body {
-    font-family: 'Roboto Condensed';
-    background-size: cover;
-    min-height: 90vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    -ms-overflow-sytle:none;
-}::-webkit-scrollbar{
-    display: none;
-}
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 25px;
-    background-color: #f1f1f1;
+    background-color: #E8E8E8;
     position: fixed;
     top: 0;
     left: 0;
@@ -34,10 +15,11 @@ header {
 }
 
 .logo {
-    width: 70px;
+    width: 90px;
     position: absolute;
-    left: 48%;
-    top: -17%;
+    left: 47.5%;
+    top: -17px;
+    opacity: 80%;
 }
 
 .menu-bar {
@@ -51,21 +33,22 @@ header {
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
-    color: #ffffff;
+    color: #000;
 }
 
 .menu {
     position: fixed;
     top: 0;
     left: -300px;
-    width: 300px;
+    width: 250px;
     height: 100%;
-    background-color: #333333;
+    background-color: #E8E8E8;
     padding: 20px;
     display: flex;
     flex-direction: column;
     transition: left 0.3s ease-in-out;
     z-index: 999;
+    box-shadow: 1px 2px 8px #00000029; 
 }
 
 #menu-toggle:checked ~ .menu {
@@ -81,16 +64,9 @@ header {
 
 .close-icon {
     font-size: 20px;
-    color: #ffffff;
+    color: #000;
     cursor: pointer;
-    margin-left: 250px;
-}
-
-.divider {
-    border: none;
-    height: 1px;
-    background-color: grey;
-    margin: 20px 0;
+    margin-left: 200px;
 }
 
 .menu-bottom {
@@ -101,14 +77,14 @@ header {
 
 .main-category {
     font-size: 19px;
-    color: #ffffff;
+    color: #000;
     margin: 10px 0;
     text-decoration: underline;
 }
 
 .sub-category {
     font-size: 17px;
-    color: #ffffff;
+    color: #000;
     margin: 10px 0;
     text-decoration: none; /* 기본 밑줄 없음 */
     display: block;
@@ -121,7 +97,7 @@ header {
 }
 
 .header-icons .icon {
-    color: #ffffff;
+    color: #000;
     text-decoration: none;
     margin-left: 20px;
     font-size: 16px;
@@ -172,9 +148,4 @@ header {
 
 .search-btn:hover, .back-btn:hover {
     background-color: #555;
-}
-
-main {
-    margin-top: 80px;
-    text-align: center;
 }

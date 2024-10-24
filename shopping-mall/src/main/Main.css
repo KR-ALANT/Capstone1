@@ -1,0 +1,35 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif; /* 전체 프로젝트에 폰트 적용 */
+}
+
+body {
+    font-family: 'Roboto Condensed';
+    background-size: cover;
+    min-height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    -ms-overflow-sytle:none;
+}::-webkit-scrollbar{
+    display: none;
+}
+
+.back-img{
+    background-image: url("../../public/image/back.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 94.3vh;
+    margin-top: -28px;
+}
+
+main {
+    margin-top: 80px;
+    text-align: center;
+}

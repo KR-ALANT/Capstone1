@@ -2,6 +2,7 @@ import React from "react";
 import styles from './TabContent.module.css';
 
 function TabContent({ tab }) {
+    /* 탭 값에 따라 반환값 적용*/
     if (tab === 0) {
         return (
             /*적립내역보기 전체*/

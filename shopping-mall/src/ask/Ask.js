@@ -55,11 +55,6 @@ const Ask = () => {
     };
 
     const handleSubmit = () => {
-        if (title.trim() === '' || content.trim() === '') {
-            setErrorMessage('제목과 내용을 모두 입력해주세요.');
-            return;
-        }
-
         setErrorMessage('');
         console.log('작성하기 클릭:', { title, content, imageFiles });
     };
@@ -182,6 +177,9 @@ const Ask = () => {
                 <div className="board-button-group">
                     <button className="submit-button" onClick={handleSubmit}>작성하기</button>
                     <button className="cancel-button" onClick={handleCancel}>취소</button>
+                </div>
+
+                <div>
                 </div>
             </div>
         </div>
