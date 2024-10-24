@@ -5,6 +5,7 @@ import Ask from './ask/Ask'; // Ask 페이지 컴포넌트를 가져온다
 import Mypage from './mypage/MyPage'
 import Point from './mypage/point/Point'
 import Coupon from './mypage/coupon/MyCoupon'
+import Login from './login/Login'
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/mypage" element={<Mypage />} />
             <Route path="/point" element={<Point />} />
             <Route path="/coupon" element={<Coupon />} />
+            <Route path="/login" element={<Login />} />
         </Routes>
     );
 };
