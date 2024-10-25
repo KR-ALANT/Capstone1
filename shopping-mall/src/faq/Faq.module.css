@@ -23,215 +23,122 @@
 }
 
 /* 사이트 배경 */
-.back-img {
-    background-color: #9E9085;
+.back-img1{
+    background-color: #ffffff;
+    height: 100vh;
     background-size: cover;
     background-position: center;
-    min-height: 100vh; /* 배경이 화면을 가득 채우도록 */
-    position: relative; /* 다른 요소들이 이 위에 배치될 수 있게 */
-    z-index: 0; /* 가장 뒤에 배치 */
+    overflow: hidden;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 25px;
-    background-color: #1f1f1f;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000; /* 배경보다 위에 위치 */
-}
-
-.logo {
-    width: 70px;
-    position: absolute;
-    left: 48%;
-}
-
-/* 메뉴 스타일 */
-.menu-bar {
+/* FAQ 스타일 */
+.faqContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 120px;
+  }
+  
+.faqSearch {
+    margin-bottom: 20px;
     position: relative;
 }
-
-#menu-toggle {
-    display: none;
+  
+.searchInput {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
 }
-
-.menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    color: #ffffff;
+  
+.searchInput:focus {
+    border-color: #333;
 }
-
-.menu {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #333333;
-    padding: 20px;
+  
+.categoryTabs {
     display: flex;
-    flex-direction: column;
-    transition: left 0.3s ease-in-out;
-    z-index: 999;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    margin-left: 20px;
 }
-
-#menu-toggle:checked ~ .menu {
-    left: 0;
-}
-
-.close-icon {
-    font-size: 20px;
-    color: #ffffff;
-    cursor: pointer;
-    margin-left: 250px;
-}
-
-.divider {
+  
+.tab {
+    background-color: #eee;
     border: none;
-    height: 1px;
-    background-color: grey;
-    margin: 20px 0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    color: #333;
 }
-
-.menu-bottom {
+  
+.activeTab {
+    background-color: #e5e5e5;
+    color: #333;
+    font-weight: bold;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+  
+.tab:hover {
+    background-color: #ddd;
+}
+  
+.faqList {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.main-category {
-    font-size: 19px;
-    color: #ffffff;
-    margin: 10px 0;
-    text-decoration: underline;
+.faqCard {
+    background-color: #fafafa;
+    border-radius: 10px;
+    padding: 20px 20px;
+    transition: box-shadow 0.3s ease;
 }
-
-.sub-category {
-    font-size: 17px;
-    color: #ffffff;
-    margin: 10px 0;
-    text-decoration: none;
-    display: block;
-    padding-left: 5px;
-    line-height: 1.6;
+  
+.faqCard:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #ddd;
 }
-
-.sub-category:hover {
-    text-decoration: underline;
-}
-
-.header-icons .icon {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 16px;
-}
-
-.header-icons .icon:hover {
-    text-decoration: underline;
-}
-
-/* 검색바 스타일 */
-.search-bar {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s ease-in-out;
+  
+.faqCardTitle {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    z-index: 998; /* 배경보다는 위, 헤더보다는 아래 */
-}
-
-.search-bar.active {
-    top: 50px;
-}
-
-.search-input {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.search-btn,
-.back-btn {
-    padding: 10px 15px;
-    background-color: #333;
-    color: #fff;
-    border: none;
     cursor: pointer;
-    border-radius: 5px;
+    font-size: 18px;
+    color: #000;
+}
+  
+.questionMark {
+    font-weight: bold;
+    color: #1f1f1f;
+    margin-right: 10px;
+}
+  
+.faqCardAnswer {
+    margin-top: 15px;
     font-size: 16px;
+    color: #555;
+    white-space: pre-wrap;
 }
-
-.search-btn:hover,
-.back-btn:hover {
-    background-color: #555;
-}
-
-/* 메인 스타일 */
-main {
-    position: relative; /* 다른 요소들과 충돌하지 않도록 */
-    z-index: 10; /* 배경보다는 위에 위치 */
-}
-
-/* FAQ 스타일 */
-.fqa-parent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.faq-list {
-    width: 80%;
-}
-
-.faq-card {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    width: 100%;
-    padding: 1.25rem;
-    border: 1px solid black;
-    border-radius: 20px;
-}
-
-.faq-card-title {
-    display: flex;
-    align-items: center;
-    padding: 1.5rem 0;
-    cursor: pointer;
-}
-
-.faq-card-answer {
-    padding: 1rem 2rem;
-    border-top: 1px solid rgba(225, 228, 230, 0.5);
-}
-
-.faq-card-none {
+  
+.faqCardNone {
     display: none;
 }
-
-.question-mark {
-    color: rgb(12, 77, 162);
-    font-size: 20px;
-    margin-right: 10px;
-}
-
-.answer-mark {
-    color: skyblue;
-    font-size: 20px;
-    margin-right: 10px;
+  
+.answerMark {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px; 
 }

@@ -14,13 +14,13 @@
     font-style: normal;
 }
 
-<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
 }
+
 /*사이트 전체 배경*/
 .back-img{
     background-color: #ffffff;
@@ -183,8 +183,6 @@ header {
     background-color: #555;
 }
 
-=======
->>>>>>> 970dae8b44af435cc464b04c0fd09de312ab96c9
 /*메인*/
 main{
     display: flex;

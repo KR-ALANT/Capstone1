@@ -29,16 +29,17 @@ const Header = () => {
                                 <a href="#" className="sub-category">Bottom</a>
                                 <a href="#" className="sub-category">Etc</a>
                             </div>
-
                             <div className="company">
                                 <span className="main-category">Q&A</span>
                                 <Link to="/ask" className="sub-category">Ask</Link>
-                                <a href="#" className="sub-category">FAQ</a>
+                                <a href="/faq" className="sub-category">FAQ</a>
                             </div>
                         </div>
                     </nav>
                 </div>
-                <img src={`${process.env.PUBLIC_URL}/image/logo.png`} alt="Logo" className="logo" />
+                    <a href='/' className='main'>
+                        <img src={`${process.env.PUBLIC_URL}/image/logo.png`} alt="Logo" className="logo" />
+                    </a>
                 <div className="header-icons">
                     <a href="#" className="icon">join</a>
                     <a href="#" className="icon">login</a>

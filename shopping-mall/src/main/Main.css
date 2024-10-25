@@ -17,8 +17,6 @@ body {
     background-repeat: no-repeat;
     color: #ffffff;
     -ms-overflow-sytle:none;
-}::-webkit-scrollbar{
-    display: none;
 }
 
 .back-img{
