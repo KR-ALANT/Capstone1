@@ -39,7 +39,7 @@ main{
 .mycoupon-list{
     display: block;
     width: 1400px;
-    height: 2px;
+    height: 231px;
     margin-top: 50px;
     font-size: 18px;
 }
@@ -126,4 +126,103 @@ main{
     align-items: center;
     height: 181.5px;
     border-bottom: 1px solid #000;
+}
+
+.mycoupon-number{
+    display: block;
+    width: 1400px;
+    height: 194px;
+    margin-top: 80px;
+    font-size: 18px;
+    border-top: 1px solid #000;
+    background-color: #F5F5F5;
+}
+
+.mycoupon-number-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.mycoupon-number-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 163px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+}
+
+.mycoupon-number-register-i{
+    width: 400px;
+    height: 40px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mycoupon-number-register-b{
+    width: 110px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.mycoupon-number-register-b:hover{
+    background-color: #F5F5F5;
+}
+
+.mycoupon-number-register-t{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.guide-mycoupon{
+    display: block;
+    width: 1400px;
+    height: 155px;;
+    margin-top: 140px;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+    color: #1f1f1f;
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.guide-usage-mycoupon{
+    display: flex;
+    justify-items: left;
+    align-items: center;
+    font-size: 1rem;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.guide-mycoupon-content{
+    font-size: 0.8rem;
+    display: block;
+    border-top: 1px solid #1f1f1f;
+    background-color: #fff;
+
+}
+
+.guide-content{
+    display: flex;
+    justify-items: left;
+    align-items: center;
+}
+
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
 }
