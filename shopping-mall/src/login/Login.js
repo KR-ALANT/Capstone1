@@ -19,6 +19,7 @@ const Login = () => {
 
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
+    const [rememberId, setRememberId] = useState(false);
     
     const handleIdChange = (e) => {
         setId(e.target.value);
@@ -27,12 +28,17 @@ const Login = () => {
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
     };
+
+    const handleRememberIdChange = (e) => {
+        setRememberId(e.target.checked);
+    };
     
     const handleSubmit = (e) => {
         e.preventDefault();
         // 로그인 로직 처리
         console.log('ID:', id);
         console.log('Password:', password);
+        console.log('Remember Id:', rememberId);
     };
         
     return(
@@ -40,34 +46,70 @@ const Login = () => {
         <div className={styles["back-img"]}>
             <Header />
             <main>
-                <div className = {styles.login}>
-                    <p>Login</p>
-                </div>
-                <div className = {styles.inputs}>
-                    <form onSubmit={handleSubmit}>
-                        <div className = {styles.login_input}>
-                            <input 
-                                type="text" 
-                                id="id" 
-                                value={id} 
-                                onChange={handleIdChange} 
-                                placeholder="ID" 
-                            />
-                        </div>
-                        <div className = {styles.passward_input}>
-                            <input 
-                                type="text" 
-                                id="password" 
-                                value={password} 
-                                onChange={handlePasswordChange} 
-                                placeholder="Password" 
-                            />
-                        </div>
-                    </form>    
-                </div>
-                <div className = {styles.check_box}>
-                    
-                </div>
+                <div>
+                    <div className = {styles.login}>
+                        <p>LOGIN</p>
+                    </div>
+                    <div className = {styles.inputs}>
+                        <form className={styles.all} onSubmit={handleSubmit}>
+                            <div className = {styles.login_input}>
+                                <input 
+                                    type="text" 
+                                    id="id" 
+                                    value={id} 
+                                    onChange={handleIdChange} 
+                                    placeholder="ID" 
+                                />
+                            </div>
+                            <div className = {styles.passward_input}>
+                                <input 
+                                    type="text" 
+                                    id="password" 
+                                    value={password} 
+                                    onChange={handlePasswordChange} 
+                                    placeholder="Password" 
+                                />
+                            </div>
+                            <div className={styles.middle_div}>
+                                <div className={styles.checkbox}>
+                                    <label className={styles.checkbox_text}>
+                                        <input 
+                                        type="checkbox" 
+                                        checked={rememberId} 
+                                        onChange={handleRememberIdChange} 
+                                        style={{ marginRight: '7px' }}
+                                        />
+                                        <div>
+                                            <p>auto login</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div className = {styles.login_buttons}>
+                                    <div className={styles.login_button}>
+                                        <p>LOGIN</p>
+                                    </div>
+                                    <div className={styles.kakao_login_button}>
+                                        <p>KAKAO LOGIN</p>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div className={styles.forgot_buttons}>
+                                <div className={styles. forgot_ID}>
+                                    <p>forgot ID?</p>
+                                </div>
+                                <div className={styles.between}>
+                                    <p>/</p>
+                                </div>
+                                <div className={styles.forgot_PW}>
+                                    <p>forgot PW?</p>
+                                </div>
+                            </div>
+                            <div className={styles.create_account}>
+                                <p>CREATE AN ACCOUNT</p>
+                            </div>
+                        </form>  
+                    </div>   
+                </div>       
             </main>
         </div>
     );
