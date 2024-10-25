@@ -85,22 +85,22 @@ const Point = () => {
           <div className={styles["guide-acc-money"]}>
             <p className={styles["guide-money"]}>적립금 안내</p>
             {/* 적립금 문구 전체 */}
-            <div className={styles["guide-content"]}>
+            <div className={styles["guide-money-content"]}>
               <br></br>
               {/* 첫 번째 적립금 문구 */}
-              <div className={styles["first-guide-content"]}>
+              <div className={styles["guide-content"]}>
                 <p className={styles.number}>1.</p>
                 <p>주문으로 발생한 적립금은 배송완료 후 20일 부터 실제 사용 가능한 적립금으로 전환됩니다. 배송완료 시점으로부터 20일 동안은 미가용 적립금으로 분류됩니다.</p>
               </div>
               <br></br>
               {/* 두 번째 적립금 문구 */}
-              <div className={styles["first-guide-content"]}>
+              <div className={styles["guide-content"]}>
                 <p className={styles.number}>2.</p>
                 <p>미가용 적립금은 반품, 구매취소 등을 대비한 임시 적립금으로 사용가능 적립금으로 전환되기까지 상품구매에 사용하실 수 없습니다.</p>
               </div>
               <br></br>
               {/* 세 번째 적립금 문구 */}
-              <div className={styles["first-guide-content"]}>
+              <div className={styles["guide-content"]}>
                 <p className={styles.number}>3.</p>
                 <p>사용가능 적립금(총적립금-사용된적립금-미가용적립금)은 상푼구매 시 바로 사용가능합니다.</p>
               </div>

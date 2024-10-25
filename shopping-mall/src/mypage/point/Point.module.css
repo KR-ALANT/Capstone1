@@ -225,7 +225,7 @@ main{
 }
 
 /* 적립금 문구 전체 */
-.guide-content{
+.guide-money-content{
     font-size: 0.8rem;
     display: block;
     border-top: 1px solid #1f1f1f;
@@ -233,7 +233,7 @@ main{
 }
 
 /* 첫 번째,두 번째, 세 번째 적립금 문구 */
-.first-guide-content{
+.guide-content{
     display: flex;
     justify-items: left;
     align-items: center;
