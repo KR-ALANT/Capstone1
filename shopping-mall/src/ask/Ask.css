@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.back-img1{
+    background-color: #ffffff;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.board-write-container {
+    position: absolute;
+    left: 240px;
+    width: 60%;
+    height: 100%;
+    margin: 100px auto;
+}
+
+.board-title {
+    font-size: 24px;
+    margin-left: 585px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'EB Garamond', serif;
+}
+
+.board-title-input {
+    width: 120%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccbcb;
+    background-color: #E8E8E8;
+    margin-bottom: 20px;
+    font-family: 'ChosunSm', sans-serif;
+}
+
+.board-content-editor-quill-editor {
+    background-color: #E8E8E8;
+    height: 400px;
+    width: 120%;
+    margin-bottom: 50px;
+}
+
+/* Quill 에디터의 컨텐츠 폰트 설정 */
+.ql-editor {
+    font-family: 'ChosunSm', sans-serif;
+    font-size: 16px;
+    color: #000;
+    background-color: #E8E8E8;
+}
+
+.file-upload-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.file-list {
+    margin: 10px 0;
+    display: flex; /* 가로 나열 */
+    flex-wrap: wrap; /* 필요에 따라 줄바꿈 허용 */
+    color: #000;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* 파일 항목 간의 간격 */
+}
+
+.max-content {
+    position: absolute;
+    left: 75.5%;
+    top: 87%;
+}
+
+.delete-file-button {
+    margin-left: 10px;
+    padding: 2px 5px;
+    background-color: #000; /* 삭제 버튼 색상 */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.board-button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-button {
+    position: absolute;
+    left: 103.5%;
+    top: 69%;
+    background-color: #E8E8E8; /* 제출 버튼 색상 */
+    width: 90px;
+    text-align: center;
+    padding: 10px 20px;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.submit-button:hover {
+    background-color: #c5c5c5;
+}
+
+.cancel-button {
+    position: absolute;
+    left: 113.8%;
+    top: 69%;
+    background-color: #E8E8E8; /* 취소 버튼 색상 */
+    padding: 10px 20px;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.cancel-button:hover {
+    background-color: #c5c5c5;
+}
+
