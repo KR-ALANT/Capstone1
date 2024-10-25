@@ -1,0 +1,128 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
+}
+
+/*메인*/
+main{
+    display: flex;
+    justify-content: center;
+}
+
+/*My Page 및 그 아래의 내용 전체*/
+.mc{
+    margin-top: 70px;
+    font-size: 30px;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+.mycoupon-list{
+    display: block;
+    width: 1400px;
+    height: 2px;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+.mycoupon-list-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mycoupon-list-title-f{
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.mycoupon-list-title-s{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.mycoupon-content-title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: bold;
+    height: 30px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #F5F5F5;
+}
+
+.mycoupon-content-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+}
+
+.mycoupon-contnet-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 490px;    
+}
+
+.mycoupon-contnet-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;    
+}
+
+.mycoupon-contnet-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+}
+
+.mycoupon-contnet-payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;    
+}
+
+.mycoupon-contnet-benefit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;        
+}
+
+.mycoupon-contnet-period{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;    
+}
+
+.mycoupon--content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 181.5px;
+    border-bottom: 1px solid #000;
+}
