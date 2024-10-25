@@ -35,7 +35,7 @@ main{
     font-weight: bold;
 }
 
-/*가용적립금, 사용적립금, 쿠폰, 총적립금, 총주문*/
+/*사용적립금, 쿠폰, 총적립금, 총주문*/
 .accumulated-money{
     display: flex;
     justify-content: space-around;
@@ -50,7 +50,7 @@ main{
     font-size: 18px;
 }
 
-/*가용적립금, 사용적립금, 쿠폰*/
+/*사용적립금, 쿠폰*/
 .acc-money{
     display: flex;
     justify-content: center;

@@ -12,12 +12,16 @@ const Point = () => {
     navigate("/Point")
   };
 
+  const MyCoupon = () => {
+    navigate("/Coupon")
+  }
+
   return (
     <div className={styles["back-img"]}>
       <Header />
       <main>
       {/*적립금 및 그 아래의 내용 전체*/}
-        <div className={styles.main2}>
+        <div>
           {/*적립금*/}
           <div className={styles.accm}>
             <p>Point</p>
@@ -36,7 +40,7 @@ const Point = () => {
                 <p> 쿠폰 </p>
                 {/*쿠폰 버튼*/}
                 <button className={styles["coupon-button"]}>
-                  <FontAwesomeIcon icon={faTicketSimple} style={{width: "20px", height: "20px", color: "#000000", marginRight: "120px"}}/>
+                  <FontAwesomeIcon icon={faTicketSimple} style={{width: "20px", height: "20px", color: "#000000", marginRight: "120px"}} onClick={MyCoupon} />
                 </button>
                 <p> 개 </p>
               </div>
@@ -48,7 +52,7 @@ const Point = () => {
                 <p> 총적립금 </p>
                 {/*총적립금 버튼*/}
                 <button className={styles["total-acc-money-button"]}>
-                  <FontAwesomeIcon icon={faSackDollar} style={{width: "20px", height: "20px"}} onClick={PointP} />
+                  <FontAwesomeIcon icon={faSackDollar} style={{width: "20px", color: "#000000", height: "20px"}} onClick={PointP} />
                 </button>
                 <p> 원 </p>
               </div>
