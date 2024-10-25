@@ -21,10 +21,19 @@
     font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
 }
 
+
 /*메인*/
 main{
     display: flex;
     justify-content: center;
+}
+
+/*My Page 및 그 아래의 내용 전체*/
+.mc{
+    margin-top: 70px;
+    font-size: 30px;
+    color: #1F1F1F;
+    font-weight: bold;
 }
 
 .mycoupon-list{
