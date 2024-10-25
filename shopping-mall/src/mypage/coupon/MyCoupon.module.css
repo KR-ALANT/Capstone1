@@ -1,34 +1,4 @@
-/* index.css */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
-@font-face {
-    font-family: 'GowunBatang-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'ChosunSm';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
-}
-
-
-/*메인*/
-main{
-    display: flex;
-    justify-content: center;
-}
-
-/*My Page 및 그 아래의 내용 전체*/
+/*My Coupon*/
 .mc{
     margin-top: 70px;
     font-size: 30px;
@@ -36,6 +6,7 @@ main{
     font-weight: bold;
 }
 
+/*마이 쿠폰 목록 전체*/
 .mycoupon-list{
     display: block;
     width: 1400px;
@@ -44,22 +15,26 @@ main{
     font-size: 18px;
 }
 
+/*마이 쿠폰 목록, 사용가능 쿠폰*/
 .mycoupon-list-title{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/*마이 쿠폰 목록*/
 .mycoupon-list-title-f{
     font-weight: bold;
     margin-left: 10px;
 }
 
+/*사용가능 쿠폰*/
 .mycoupon-list-title-s{
     font-weight: bold;
     margin-right: 10px;
 }
 
+/*번호, 쿠폰명, 쿠폰전용 상품, 구매금액, 결제수단, 쿠폰혜택, 사용가능기간*/
 .mycoupon-content-title{
     display: flex;
     justify-content: left;
@@ -71,6 +46,7 @@ main{
     background-color: #F5F5F5;
 }
 
+/*번호*/
 .mycoupon-content-number{
     display: flex;
     justify-content: center;
@@ -78,6 +54,7 @@ main{
     width: 50px;
 }
 
+/*쿠폰명*/
 .mycoupon-contnet-name{
     display: flex;
     justify-content: center;
@@ -85,6 +62,7 @@ main{
     width: 490px;    
 }
 
+/*쿠폰전용 상품*/
 .mycoupon-contnet-product{
     display: flex;
     justify-content: center;
@@ -92,6 +70,7 @@ main{
     width: 168px;    
 }
 
+/*구매금액*/
 .mycoupon-contnet-price{
     display: flex;
     justify-content: center;
@@ -99,6 +78,7 @@ main{
     width: 168px;
 }
 
+/*결제수단*/
 .mycoupon-contnet-payment{
     display: flex;
     justify-content: center;
@@ -106,6 +86,7 @@ main{
     width: 168px;    
 }
 
+/*쿠폰혜택*/
 .mycoupon-contnet-benefit{
     display: flex;
     justify-content: center;
@@ -113,6 +94,7 @@ main{
     width: 168px;        
 }
 
+/*사용가능기간*/
 .mycoupon-contnet-period{
     display: flex;
     justify-content: center;
@@ -120,6 +102,7 @@ main{
     width: 168px;    
 }
 
+/*쿠폰 내용*/
 .mycoupon--content{
     display: flex;
     justify-content: center;
@@ -128,6 +111,7 @@ main{
     border-bottom: 1px solid #000;
 }
 
+/*쿠폰인증번호 등록하기 전체*/
 .mycoupon-number{
     display: block;
     width: 1400px;
@@ -138,6 +122,7 @@ main{
     background-color: #F5F5F5;
 }
 
+/*쿠폰인증번호 등록하기*/
 .mycoupon-number-title{
     display: flex;
     justify-content: space-between;
@@ -147,6 +132,7 @@ main{
     margin-left: 10px;
 }
 
+/*쿠폰 입력창, 쿠폰번호 인증 버튼, 쿠폰관련 문구*/
 .mycoupon-number-register{
     display: flex;
     justify-content: center;
@@ -158,6 +144,7 @@ main{
     background-color: #fff;
 }
 
+/*쿠폰 입력창*/
 .mycoupon-number-register-i{
     width: 400px;
     height: 40px;
@@ -166,6 +153,7 @@ main{
     font-weight: bold;
 }
 
+/*쿠폰번호 인증 버튼*/
 .mycoupon-number-register-b{
     width: 110px;
     height: 40px;
@@ -175,15 +163,18 @@ main{
     cursor: pointer;
 }
 
+
 .mycoupon-number-register-b:hover{
     background-color: #F5F5F5;
 }
 
+/*쿠폰관련 문구*/
 .mycoupon-number-register-t{
     margin-top: 10px;
     font-weight: bold;
 }
 
+/*쿠폰 이용 안내 전체*/
 .guide-mycoupon{
     display: block;
     width: 1400px;
@@ -196,6 +187,7 @@ main{
     background-color: #f5f5f5;
 }
 
+/*쿠폰 이용 안내*/
 .guide-usage-mycoupon{
     display: flex;
     justify-items: left;
@@ -205,6 +197,7 @@ main{
     margin-left: 10px;
 }
 
+/*쿠폰 이용 안내 문구 전체*/
 .guide-mycoupon-content{
     font-size: 0.8rem;
     display: block;
@@ -213,12 +206,14 @@ main{
 
 }
 
+/*쿠폰 이용 안내 문구*/
 .guide-content{
     display: flex;
     justify-items: left;
     align-items: center;
 }
 
+/*쿠폰 이용 안내 숫자들*/
 .number{
     display: flex;
     justify-content: center;
