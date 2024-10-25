@@ -7,6 +7,8 @@ import Point from './mypage/point/Point';
 import Coupon from './mypage/coupon/MyCoupon';
 import Login from './login/Login';
 import Faq from './faq/Faq';
+import Rating from './mypage/rating/Rating'
+
 
 const App = () => {
     return (
@@ -18,6 +20,7 @@ const App = () => {
             <Route path="/coupon" element={<Coupon />} />
             <Route path="/login" element={<Login />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/rating" element={<Rating />} />
         </Routes>
     );
 };
