@@ -9,7 +9,7 @@ import Header from '../header/Header.js'
 const MyPage = () => {
   const navigate = useNavigate();
 
-  const PointP = () => {
+  const MyPoint = () => {
     navigate("/Point")
   }
 
@@ -17,9 +17,13 @@ const MyPage = () => {
     navigate("/Coupon")
   }
 
+  const MyRating = () =>{
+    navigate("/Rating")
+  }
+
   return (
     /*사이트 전체*/
-    <div className={styles["back-img"]}>
+    <div>
       <Header />
       <main>
         {/*My Page 및 그 아래의 내용 전체*/}
@@ -55,7 +59,7 @@ const MyPage = () => {
                 <p> 총적립금 </p>
                 {/*총적립금 버튼*/}
                 <button className={styles["total-acc-money-button"]}>
-                  <FontAwesomeIcon icon={faSackDollar} style={{width: "20px", height: "20px", color: "black"}}  onClick={PointP}/>
+                  <FontAwesomeIcon icon={faSackDollar} style={{width: "20px", height: "20px", color: "black"}}  onClick={MyPoint}/>
                 </button>
                 <p> 원 </p>
               </div>
@@ -112,7 +116,7 @@ const MyPage = () => {
                 <p className={styles["complete-delivery-number"]}> 0 </p>
               </div>
               {/*등급확인*/}
-              <button className={styles["check-rating"]}>등급 확인</button>
+              <button className={styles["check-rating"]} onClick={MyRating}>등급 확인</button>
             </div>
           </div>
           {/*Order, Profile, Wishlist, Board*/}
