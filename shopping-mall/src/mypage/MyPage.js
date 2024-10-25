@@ -33,10 +33,6 @@ const MyPage = () => {
             {/*가용적립금, 사용적립금, 쿠폰*/}
             <div classNmae={styles["acc-money"]}>
               {/*가용적립금*/}
-              <div className={styles["available-reserve"]}>
-                <p> 가용적립금 </p>
-                <p> 원 </p>
-              </div>
               {/*사용적립금*/}
               <div className={styles["reserve-use"]}>
                 <p> 사용적립금 </p>
@@ -80,10 +76,10 @@ const MyPage = () => {
             <div className={styles["total-myorder"]}>
               {/*나의 주문 처리 현황*/}
                 <p className={styles.myorder}>나의 주문 처리 현황</p>
-                <pre> (최근 </pre>
+                <pre className={styles.recently}> (최근 </pre>
                 {/*3개월*/}
                 <p className={styles.thrmonth}> 3개월 </p>
-                <pre> 기준)</pre>
+                <pre className={styles.recently}> 기준)</pre>
             </div>
             {/*입금전, 배송준비중, 배송중, 배송완료, 등급확인*/}
             <div className={styles["total-delivery"]}>
