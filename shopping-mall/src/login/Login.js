@@ -79,7 +79,7 @@ const Login = () => {
                                         onChange={handleRememberIdChange} 
                                         style={{ marginRight: '7px' }}
                                         />
-                                        <div>
+                                        <div className={styles.checkbox_text_1}>
                                             <p>auto login</p>
                                         </div>
                                     </label>
