@@ -8,7 +8,7 @@ import Header from '../../header/Header.js'
 const Point = () => {
   const navigate = useNavigate();
 
-  const PointP = () => {
+  const MyPoint = () => {
     navigate("/Point")
   };
 
@@ -17,12 +17,12 @@ const Point = () => {
   }
 
   return (
-    <div className={styles["back-img"]}>
+    <div>
       <Header />
       <main>
       {/*적립금 및 그 아래의 내용 전체*/}
         <div>
-          {/*적립금*/}
+          {/*Point*/}
           <div className={styles.accm}>
             <p>Point</p>
           </div>
@@ -52,7 +52,7 @@ const Point = () => {
                 <p> 총적립금 </p>
                 {/*총적립금 버튼*/}
                 <button className={styles["total-acc-money-button"]}>
-                  <FontAwesomeIcon icon={faSackDollar} style={{width: "20px", color: "#000000", height: "20px"}} onClick={PointP} />
+                  <FontAwesomeIcon icon={faSackDollar} style={{width: "20px", color: "#000000", height: "20px"}} onClick={MyPoint} />
                 </button>
                 <p> 원 </p>
               </div>
