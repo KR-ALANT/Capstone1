@@ -31,9 +31,6 @@ main{
     width: auto;
 }
 
-.all{
-    width: 400px;
-}
 
 .login_input{
     margin-bottom: 10px;
@@ -43,12 +40,16 @@ main{
     border: none;
     border-bottom: 2px solid #939292;
     outline: none;
+    width: 400px;
+    height: 30px;
 }
 
 .passward_input input{
     border: none;
     border-bottom: 2px solid #939292;
     outline: none;
+    width: 400px;
+    height: 30px;
 }
 
 .middle_div{
@@ -58,11 +59,16 @@ main{
 }
 .checkbox{
     margin-top: 8px;
+    color: #1F1F1F;
 }
 
 .checkbox_text{
     display: flex;
     font-size: 13px;
+}
+
+.checkbox_text_1{
+    margin-bottom: 2px;;
 }
 
 .login_buttons{
