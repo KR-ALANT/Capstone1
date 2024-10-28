@@ -17,7 +17,6 @@ const MyCoupon = () => {
           <div className={styles["mycoupon-list"]}>
             {/*마이 쿠폰 목록, 사용가능 쿠폰*/}
             <div className={styles["mycoupon-list-title"]}>
-              <p className={styles["mycoupon-list-title-f"]}>마이 쿠폰 목록</p>
               <p className={styles["mycoupon-list-title-s"]}>사용가능 쿠폰 0장</p>
             </div>
             {/*번호, 쿠폰명, 쿠폰전용 상품, 구매금액, 결제수단, 쿠폰혜택, 사용가능기간*/}
@@ -40,16 +39,14 @@ const MyCoupon = () => {
           </div>
           {/*쿠폰인증번호 등록하기 전체*/}
           <div className={styles["mycoupon-number"]}>
-            <p className={styles["mycoupon-number-title"]}>쿠폰인증번호 등록하기</p>
+            <p className={styles["mycoupon-number-title"]}>쿠폰 등록하기</p>
             {/*쿠폰 입력창, 쿠폰번호 인증 버튼, 쿠폰관련 문구*/}
             <div className={styles["mycoupon-number-register"]}>
               <div>
                 {/*쿠폰 입력창*/}
-                <input className={styles["mycoupon-number-register-i"]}></input>
+                <input className={styles["mycoupon-number-register-i"]} type="text" value="반드시 쇼핑몰에서 발행한 쿠폰 8자리만 입력해주세요."></input>
                 <button className={styles["mycoupon-number-register-b"]}>쿠폰번호인증</button>
               </div>
-              {/*쿠폰관련 문구*/}
-              <p className={styles["mycoupon-number-register-t"]}>반드시 쇼핑몰에서 발행한 쿠폰번호만 입력해주세요.</p>
             </div>
             {/*쿠폰 이용 안내 전체*/}
             <div className={styles["guide-mycoupon"]}>
