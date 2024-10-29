@@ -89,7 +89,7 @@ const Cart = () => {
         <h2>Shopping Cart</h2>
         <div className={style["cart-header"]}>
           <span>이미지</span>
-          <span>상품 정보</span>
+          <span>            상품 정보</span>
           <span>수량</span>
           <span>구매 금액</span>
           <span>할인 금액</span>
