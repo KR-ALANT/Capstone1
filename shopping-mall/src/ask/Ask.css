@@ -16,7 +16,8 @@
 
 .board-write-container {
     position: absolute;
-    left: 240px;
+    left: 230px;
+    top: -120px;
     width: 60%;
     height: 100%;
     margin: 100px auto;
@@ -78,8 +79,7 @@
 
 .max-content {
     position: absolute;
-    left: 75.5%;
-    top: 87%;
+    top: 98%;
 }
 
 .delete-file-button {
@@ -100,7 +100,7 @@
 .submit-button {
     position: absolute;
     left: 102%;
-    top: 77%;
+    top: 95%;
     background-color: #E8E8E8; /* 제출 버튼 색상 */
     width: 90px;
     text-align: center;
@@ -120,7 +120,7 @@
 .cancel-button {
     position: absolute;
     left: 113%;
-    top: 77%;
+    top: 95%;
     background-color: #E8E8E8; /* 취소 버튼 색상 */
     padding: 10px 20px;
     color: #000;

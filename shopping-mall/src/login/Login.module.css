@@ -19,19 +19,99 @@ main{
 }
 
 .login{
-    position: fixed;
-    top: 240px;
+    margin-top: 180px;
     font-size: 25px;
     color: #1F1F1F;
     font-weight: bold;
 }
 
 .inputs{
-    position: fixed;
-    top: 280px;
-    width: 300px;
+    display: flex;
+    margin-top: 30px;
+    width: auto;
 }
+
 
 .login_input{
     margin-bottom: 10px;
+}
+
+.login_input input{
+    border: none;
+    border-bottom: 2px solid #939292;
+    outline: none;
+    width: 400px;
+    height: 30px;
+}
+
+.passward_input input{
+    border: none;
+    border-bottom: 2px solid #939292;
+    outline: none;
+    width: 400px;
+    height: 30px;
+}
+
+.middle_div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.checkbox{
+    margin-top: 8px;
+    color: #1F1F1F;
+}
+
+.checkbox_text{
+    display: flex;
+    font-size: 13px;
+}
+
+.checkbox_text_1{
+    margin-bottom: 2px;;
+}
+
+.login_buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #1F1F1F;
+}
+
+.login_button{
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.kakao_login_button{
+    cursor: pointer;
+}
+
+.forgot_buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px; 
+    font-size: 15px;
+    color: #1F1F1F;
+}
+
+.between{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.forgot_ID{
+    cursor: pointer;
+}
+
+.forgot_PW{
+    cursor: pointer;
+}
+
+.create_account{
+    margin-top: 20px;
+    font-size: 20px;
+    color: #1F1F1F;
+    cursor: pointer;
 }

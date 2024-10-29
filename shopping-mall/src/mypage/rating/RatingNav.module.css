@@ -1,0 +1,282 @@
+/*5th등급 숫자 및 설명 전체*/
+.fifth{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/*등급 확인*/
+.fifth-check-rating{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+/*등급확인 숫자*/
+.fifth-number-rating{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+/*등급 확인 영어*/
+.fifth-number-rating-e{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/*등급 설명 전체*/
+.fifth-rating-Precautions{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-left: 20px;
+    opacity: 0.7;
+}
+
+/*등급 설명 문구*/
+.fifth-rating-li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 7px;
+    font-size: 0.9rem
+}
+
+/*4th등급 숫자 및 설명 전체*/
+.forth{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 280px;
+}
+
+/*등급 확인*/
+.forth-check-rating{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+/*등급확인 숫자*/
+.forth-number-rating{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+/*등급 확인 영어*/
+.forth-number-rating-e{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/*등급 설명 전체*/
+.forth-rating-Precautions{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-left: 20px;
+    opacity: 0.7;
+}
+
+/*등급 설명 문구*/
+.forth-rating-li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 7px;
+    font-size: 0.9rem
+}
+
+/*3rd등급 숫자 및 설명 전체*/
+.third{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 560px;
+    width: 500px;
+}
+
+/*등급 확인*/
+.third-check-rating{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+/*등급확인 숫자*/
+.third-number-rating{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+/*등급 확인 영어*/
+.third-number-rating-e{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/*등급 설명 전체*/
+.third-rating-Precautions{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-left: 20px;
+    opacity: 0.7;
+}
+
+/*등급 설명 문구*/
+.third-rating-li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 7px;
+    font-size: 0.9rem
+}
+
+/*2nd등급 숫자 및 설명 전체*/
+.second{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 280px;
+}
+
+/*등급 확인*/
+.second-check-rating{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+/*등급확인 숫자*/
+.second-number-rating{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+/*등급 확인 영어*/
+.second-number-rating-e{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/*등급 설명 전체*/
+.second-rating-Precautions{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-left: 20px;
+    opacity: 0.7;
+}
+
+/*등급 설명 문구*/
+.second-rating-li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 7px;
+    font-size: 0.9rem
+}
+
+/*1st등급 숫자 및 설명 전체*/
+.first{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/*등급 확인*/
+.first-check-rating{
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+}
+
+/*등급확인 숫자*/
+.first-number-rating{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 6rem;
+}
+
+/*등급 확인 영어*/
+.first-number-rating-e{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/*등급 설명 전체*/
+.first-rating-Precautions{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    margin-left: 20px;
+    opacity: 0.7;
+}
+
+/*등급 설명 문구*/
+.first-rating-li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-bottom: 7px;
+    font-size: 0.9rem
+}
+
+/*선택된 1st등급 숫자 및 설명 전체*/
+.first1{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #c0c0c0;
+    width: 500px;
+}
+
+/*선택된 2nd등급 숫자 및 설명 전체*/
+.second2{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 280px;
+    background-color: #cccccc;
+    width: 500px;
+}
+
+/*선택된 3rd등급 숫자 및 설명 전체*/
+.third3{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 560px;
+    background-color: #d1d1d1;
+    width: 500px;
+    
+}
+
+/*선택된 4th등급 숫자 및 설명 전체*/
+.forth4{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 280px;
+    background-color: #d6d6d6;
+    width: 500px;
+}
+
+/*선택된 5th등급 숫자 및 설명 전체*/
+.fifth5{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #E0E0E0;
+    width: 500px;
+}

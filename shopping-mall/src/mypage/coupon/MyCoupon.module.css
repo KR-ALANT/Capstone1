@@ -1,4 +1,3 @@
-/* index.css */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @font-face {
     font-family: 'GowunBatang-Regular';
@@ -21,182 +20,227 @@
     font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
 }
 
-body {
-    font-family: 'Roboto Condensed';
-    background-size: cover;
-    min-height: 90vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    -ms-overflow-sytle:none;
-}
-::-webkit-scrollbar{
-    display: none;
+/*My Coupon*/
+.mc{
+    margin-top: 70px;
+    font-size: 30px;
+    color: #1F1F1F;
+    font-weight: bold;
 }
 
-/*사이트 전체 배경*/
-.back-img{
-    background-color: #9E9085;
-    background-size: cover;
-    background-position: center;
-    min-height: 94.3vh;
-    margin-top: -28px;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 25px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.logo {
-    width: 70px;
-    position: absolute;
-    left: 48%;
-    top: -17%;
-}
-
-.menu-bar {
-    position: relative;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-.menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    color: #ffffff;
-}
-
-.menu {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100%;
-    background-color: #333333;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    transition: left 0.3s ease-in-out;
-    z-index: 999;
-}
-
-#menu-toggle:checked ~ .menu {
-    left: 0;
-}
-
-.menu-top-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.close-icon {
-    font-size: 20px;
-    color: #ffffff;
-    cursor: pointer;
-    margin-left: 250px;
-}
-
-.divider {
-    border: none;
-    height: 1px;
-    background-color: grey;
-    margin: 20px 0;
-}
-
-.menu-bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.main-category {
-    font-size: 19px;
-    color: #ffffff;
-    margin: 10px 0;
-    text-decoration: underline;
-}
-
-.sub-category {
-    font-size: 17px;
-    color: #ffffff;
-    margin: 10px 0;
-    text-decoration: none; /* 기본 밑줄 없음 */
+/*마이 쿠폰 목록 전체*/
+.mycoupon-list{
     display: block;
-    padding-left: 5px;
-    line-height: 1.6;
+    width: 1400px;
+    height: 231px;
+    margin-top: 50px;
+    border-bottom: 1px solid #000;
 }
 
-.sub-category:hover {
-    text-decoration: underline; /* hover 시 밑줄 추가 */
+/*마이 쿠폰 목록, 사용가능 쿠폰*/
+.mycoupon-list-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
 }
 
-.header-icons .icon {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 16px;
+/*사용가능 쿠폰*/
+.mycoupon-list-title-s{
+    font-weight: bold;
 }
 
-.header-icons .icon:hover {
-    text-decoration: underline; /* hover 시 밑줄 추가 */
+/*번호, 쿠폰명, 쿠폰전용 상품, 구매금액, 결제수단, 쿠폰혜택, 사용가능기간*/
+.mycoupon-content-title{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 30px;
+    font-size: 15px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #F5F5F5;
+    font-weight: bold;
 }
 
-/* Search bar styles */
-.search-bar {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s ease-in-out;
+/*번호*/
+.mycoupon-content-number{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    z-index: 998;
+    width: 50px;
 }
 
-.search-bar.active {
-    top: 50px;
+/*쿠폰명*/
+.mycoupon-contnet-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 490px;
 }
 
-.search-input {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+/*쿠폰전용 상품*/
+.mycoupon-contnet-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;    
 }
 
-.search-btn, .back-btn {
-    padding: 10px 15px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
+/*구매금액*/
+.mycoupon-contnet-price{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
 }
 
-.search-btn:hover, .back-btn:hover {
-    background-color: #555;
+/*결제수단*/
+.mycoupon-contnet-payment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;    
 }
 
-main {
+/*쿠폰혜택*/
+.mycoupon-contnet-benefit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;      
+}
+
+/*사용가능기간*/
+.mycoupon-contnet-period{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;    
+}
+
+/*쿠폰 내용*/
+.mycoupon--content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 181.5px;
+}
+
+/*쿠폰인증번호 등록하기 전체*/
+.mycoupon-number{
+    display: block;
+    width: 1400px;
+    height: 194px;
     margin-top: 80px;
+    border-top: 1px solid #000;
+    background-color: #F5F5F5;
+}
+
+/*쿠폰 등록하기*/
+.mycoupon-number-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+/*쿠폰 입력창, 쿠폰번호 인증 버튼, 쿠폰관련 문구*/
+.mycoupon-number-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 163px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+}
+
+/*쿠폰 입력창*/
+.mycoupon-number-register-i{
+    width: 400px;
+    height: 40px;
+    font-size: 15px;
+    color: #999;
     text-align: center;
+    font-weight: bold;
+}
+
+/*쿠폰번호 인증 버튼*/
+.mycoupon-number-register-b{
+    width: 110px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #fff;
+    cursor: pointer;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: none;
+    border-right: 1px solid #000;
+}
+
+
+.mycoupon-number-register-b:hover{
+    background-color: #F5F5F5;
+}
+
+/*쿠폰관련 문구*/
+.mycoupon-number-register-t{
+    margin-top: 10px;
+    margin-left: -30px;
+    font-size: 14px;
+}
+
+/*쿠폰 이용 안내 전체*/
+.guide-mycoupon{
+    display: block;
+    width: 1400px;
+    height: 155px;;
+    margin-top: 140px;
+    border-top: 1px solid #1f1f1f;
+    border-bottom: 1px solid #1f1f1f;
+    color: #1f1f1f;
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+/*쿠폰 이용 안내*/
+.guide-usage-mycoupon{
+    display: flex;
+    justify-items: left;
+    align-items: center;
+    font-size: 1rem;
+    height: 30px;
+    margin-left: 10px;
+}
+
+/*쿠폰 이용 안내 문구 전체*/
+.guide-mycoupon-content{
+    font-size: 0.8rem;
+    display: block;
+    border-top: 1px solid #1f1f1f;
+    background-color: #fff;
+
+}
+
+/*쿠폰 이용 안내 문구*/
+.guide-content{
+    display: flex;
+    justify-items: left;
+    align-items: center;
+    padding: 5px;
+}
+
+/*쿠폰 이용 안내 숫자들*/
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
 }

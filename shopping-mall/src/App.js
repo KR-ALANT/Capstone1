@@ -8,6 +8,7 @@ import Coupon from './mypage/coupon/MyCoupon';
 import Login from './login/Login';
 import Faq from './faq/Faq';
 import Cart from './cart/Cart';
+import Rating from './mypage/rating/Rating'
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/rating" element={<Rating />} />
         </Routes>
     );
 };
