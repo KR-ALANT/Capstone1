@@ -101,6 +101,15 @@ main{
     margin-left: 15px;
     margin-right: 15px;
 }
+
+.forgotB{
+    color: #000;
+    text-decoration: none;
+}
+
+.forgotB:hover{
+    text-decoration: underline;
+}
 .forgot_ID{
     cursor: pointer;
 }
