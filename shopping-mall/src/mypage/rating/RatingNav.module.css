@@ -3,6 +3,12 @@
     display: flex;
     justify-content: left;
     align-items: center;
+    margin-top: 10px;
+    margin-left: 200px;
+}
+
+.first:hover{
+    
 }
 
 /*등급 확인*/
@@ -49,7 +55,8 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-left: 280px;
+    margin-top: 10px;
+    margin-left: 150px;
 }
 
 /*등급 확인*/
@@ -96,8 +103,8 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-left: 560px;
-    width: 500px;
+    margin-top: 10px;
+    margin-left: 100px;
 }
 
 /*등급 확인*/
@@ -118,6 +125,7 @@
 .third-number-rating-e{
     margin-bottom: 10px;
     font-weight: bold;
+    margin-left: -10px;
     font-size: 2rem;
 }
 
@@ -144,7 +152,8 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-left: 280px;
+    margin-top: 10px;
+    margin-left: 50px;
 }
 
 /*등급 확인*/
@@ -235,48 +244,42 @@
 /*선택된 1st등급 숫자 및 설명 전체*/
 .first1{
     display: flex;
-    justify-content: left;
     align-items: center;
-    background-color: #c0c0c0;
-    width: 500px;
+    background-color: #e3e3e3;
 }
 
 /*선택된 2nd등급 숫자 및 설명 전체*/
 .second2{
     display: flex;
-    justify-content: left;
     align-items: center;
-    margin-left: 280px;
-    background-color: #cccccc;
-    width: 500px;
+    margin-left: 50px;
+    background-color: #e3e3e3;
+    margin-top: 10px;
 }
 
 /*선택된 3rd등급 숫자 및 설명 전체*/
 .third3{
     display: flex;
-    justify-content: left;
     align-items: center;
-    margin-left: 560px;
-    background-color: #d1d1d1;
-    width: 500px;
-    
+    margin-left: 100px;
+    background-color: #e3e3e3;
+    margin-top: 10px;
 }
 
 /*선택된 4th등급 숫자 및 설명 전체*/
 .forth4{
     display: flex;
-    justify-content: left;
     align-items: center;
-    margin-left: 280px;
-    background-color: #d6d6d6;
-    width: 500px;
+    margin-left: 150px;
+    background-color: #e3e3e3;
+    margin-top: 10px;
 }
 
 /*선택된 5th등급 숫자 및 설명 전체*/
 .fifth5{
     display: flex;
-    justify-content: left;
     align-items: center;
-    background-color: #E0E0E0;
-    width: 500px;
+    background-color: #e3e3e3;
+    margin-top: 10px;
+    margin-left: 200px;
 }
