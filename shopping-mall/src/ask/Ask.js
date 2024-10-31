@@ -3,6 +3,7 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import './Ask.css'; // 스타일링 파일
 import Header from '../header/Header.js'
+import Footer from '../footer/Footer.js'
 
 const MAX_CONTENT_LENGTH = 800; // 최대 글자 수
 

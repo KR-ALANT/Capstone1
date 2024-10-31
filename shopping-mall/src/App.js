@@ -8,7 +8,8 @@ import Coupon from './mypage/coupon/MyCoupon';
 import Login from './login/Login';
 import Faq from './faq/Faq';
 import Cart from './cart/Cart';
-import Rating from './mypage/rating/Rating'
+import Rating from './mypage/rating/Rating';
+import Footer from './footer/Footer';
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/faq" element={<Faq />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/rating" element={<Rating />} />
+            <Route path="/footer" element={<Footer />} />
         </Routes>
     );
 };

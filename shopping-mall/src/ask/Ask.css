@@ -6,6 +6,14 @@
     font-style: normal;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif; /* 전체 프로젝트에 폰트 적용 */
+}
+
+
 .back-img1{
     background-color: #ffffff;
     height: 100vh;
@@ -135,3 +143,11 @@
     background-color: #c5c5c5;
 }
 
+.Footer {
+    background-color: #e8e8e8;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 12px;
+}
