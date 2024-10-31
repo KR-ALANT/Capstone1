@@ -42,10 +42,10 @@ const Header = () => {
                     </a>
                 <div className="header-icons">
                     <a href="#" className="icon">join</a>
-                    <a href="#" className="icon">login</a>
+                    <a href="/Login" className="icon">login</a>
                     <a href="/MyPage" className="icon" >mypage</a>
                     <a href="#" className="icon" onClick={toggleSearch}>search</a>
-                    <a href="#" className="icon">cart</a>
+                    <a href="/Cart" className="icon">cart</a>
                 </div>
             </header>
             <div className={`search-bar ${searchActive ? 'active' : ''}`}>

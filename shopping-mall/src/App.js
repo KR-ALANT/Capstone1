@@ -7,8 +7,10 @@ import Point from './mypage/point/Point';
 import Coupon from './mypage/coupon/MyCoupon';
 import Login from './login/Login';
 import Faq from './faq/Faq';
+import Cart from './cart/Cart';
 import Rating from './mypage/rating/Rating'
-
+import ForgotID from './forgotid/ForgotID'
+import ForgotPW from './forgotpw/ForgotPW'
 
 const App = () => {
     return (
@@ -19,7 +21,10 @@ const App = () => {
             <Route path="/point" element={<Point />} />
             <Route path="/coupon" element={<Coupon />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/forgotid" element={<ForgotID />} />
+            <Route path="/forgotpw" element={<ForgotPW />} />
             <Route path="/faq" element={<Faq />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/rating" element={<Rating />} />
         </Routes>
     );

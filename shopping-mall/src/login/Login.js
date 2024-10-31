@@ -95,13 +95,13 @@ const Login = () => {
                             </div>    
                             <div className={styles.forgot_buttons}>
                                 <div className={styles. forgot_ID}>
-                                    <p>forgot ID?</p>
+                                    <a href="/ForgotID" className={styles.forgotB}><p>forgot ID?</p></a>
                                 </div>
                                 <div className={styles.between}>
                                     <p>/</p>
                                 </div>
                                 <div className={styles.forgot_PW}>
-                                    <p>forgot PW?</p>
+                                    <a href="/ForgotPW" className={styles.forgotB}><p>forgot PW?</p></a>
                                 </div>
                             </div>
                             <div className={styles.create_account}>

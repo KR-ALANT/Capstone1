@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.id{
+    margin-top: 180px;
+    font-size: 25px;
+    color: #1F1F1F;
+    font-weight: bold;
+}
+
+.radio_div{
+    margin-top: 40px;
+}
+
+.radio_div label{
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.radioB{
+    display: flex;
+    justify-content: center;
+}
+
+.radioB input{
+    margin-right: 5px;
+}
+.passB{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.passB button{
+    width: 130px;
+    height: 50px;
+    background-color: #fff;
+    border-color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.name{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.name input{
+    width: 400px;
+    height: 33px;
+    margin-left: 75px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.name p{
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+.mail{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mail input{
+    width: 400px;
+    height: 33px;
+    margin-left: 75px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.mail p{
+    margin-top: 8px;
+    font-size: 20px;
+}
+.sendB button{
+    margin: 20px;
+    width: 500px;
+    height: 40px;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;;
+    font-weight: bold;
+    cursor: pointer;
+}
