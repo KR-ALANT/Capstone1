@@ -48,7 +48,7 @@ const ForgotID = () => {
                             </div>
                             )}
                             {selectedOption === 'option2' && (
-                            <div>
+                            <div className={styles.option2}>
                                 <div className={styles.name}>
                                     <p>NAME</p>
                                     <input type="text" />

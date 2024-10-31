@@ -37,9 +37,9 @@ const Header = () => {
                         </div>
                     </nav>
                 </div>
-                    <a href='/' className='main'>
-                        <img src={`${process.env.PUBLIC_URL}/image/logo.png`} alt="Logo" className="logo" />
-                    </a>
+                <a href='/' className='main'>
+                    <img src={`${process.env.PUBLIC_URL}/image/logo.png`} alt="Logo" className="logo" />
+                </a>
                 <div className="header-icons">
                     <a href="#" className="icon">join</a>
                     <a href="/Login" className="icon">login</a>

@@ -42,6 +42,7 @@ main{
 .radioB input{
     margin-right: 5px;
 }
+
 .passB{
     display: flex;
     justify-content: center;
@@ -59,9 +60,13 @@ main{
     cursor: pointer;
 }
 
+.option2{
+    width: 500px;
+}
+
 .name{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -69,41 +74,40 @@ main{
 .name input{
     width: 400px;
     height: 33px;
-    margin-left: 75px;
     font-size: 16px;
     padding-left: 10px;
 }
 
 .name p{
-    margin-top: 8px;
+    margin-top: 6px;
     font-size: 20px;
 }
 
 .mail{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .mail input{
     width: 400px;
     height: 33px;
-    margin-left: 75px;
     font-size: 16px;
     padding-left: 10px;
 }
 
 .mail p{
-    margin-top: 8px;
+    margin-top: 7px;
     font-size: 20px;
 }
 .sendB button{
     margin: 20px;
-    width: 500px;
+    width: 200px;
     height: 40px;
     margin-top: 40px;
     font-size: 20px;
-    color: #fff;
-    background-color: #000;;
+    color: #333;
+    border: 1px solid #e5e5e5;
+    background-color: #e5e5e5;
     font-weight: bold;
     cursor: pointer;
 }
