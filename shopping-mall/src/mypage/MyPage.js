@@ -21,6 +21,10 @@ const MyPage = () => {
     navigate("/Rating")
   }
 
+  const MyOrder = () =>{
+    navigate("/Order")
+  }
+
   return (
     /*사이트 전체*/
     <div>
@@ -122,7 +126,7 @@ const MyPage = () => {
           {/*Order, Profile, Wishlist, Board*/}
           <div className={styles["every-page"]}>
             {/*order 전체*/}
-            <button className={styles.order}>
+            <button className={styles.order} onClick={MyOrder}>
               {/*Order 아이콘*/}
               <FontAwesomeIcon icon={faClipboard} style={{width: "35px", height: "35px"}}/>
               {/*Order*/}
