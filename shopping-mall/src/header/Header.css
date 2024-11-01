@@ -15,12 +15,20 @@ header {
     font-family: "GowunBatang-Regular";
 }
 
+.main-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 32px;
+    overflow: hidden;
+}
+
 .logo {
     width: 90px;
-    position: absolute;
     left: 46.9%;
-    top: -17px;
     opacity: 80%;
+    border: 1px solid #000;
 }
 
 .menu-bar {
@@ -31,10 +39,19 @@ header {
     display: none;
 }
 
+.menu1{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 10px;
+    width: 300px;
+}
+
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
     color: #000;
+    
 }
 
 .menu {
@@ -95,6 +112,10 @@ header {
 
 .sub-category:hover {
     text-decoration: underline; /* hover 시 밑줄 추가 */
+}
+
+.header-icons{
+    width: 300px;
 }
 
 .header-icons .icon {
