@@ -11,6 +11,7 @@ import Cart from './cart/Cart';
 import Rating from './mypage/rating/Rating'
 import ForgotID from './forgotid/ForgotID'
 import ForgotPW from './forgotpw/ForgotPW'
+import Order from './mypage/order/MyOrder'
 
 const App = () => {
     return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/faq" element={<Faq />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/rating" element={<Rating />} />
+            <Route path="/order" element={<Order />} />
         </Routes>
     );
 };
