@@ -9,10 +9,11 @@ import Login from './login/Login';
 import Faq from './faq/Faq';
 import Cart from './cart/Cart';
 import Rating from './mypage/rating/Rating'
-import ForgotID from './forgotid/ForgotID'
-import ForgotPW from './forgotpw/ForgotPW'
-import FoundID from './foundid/FoundID'
-import FoundPW from './foundpw/FoundPW'
+import ProfileChange from './mypage/profilechange/ProfileChange'
+import ForgotID from './login/forgotid/ForgotID'
+import ForgotPW from './login/forgotpw/ForgotPW'
+import FoundID from './login/foundid/FoundID'
+import FoundPW from './login/foundpw/FoundPW'
 
 const App = () => {
     return (
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/faq" element={<Faq />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/rating" element={<Rating />} />
+            <Route path="/profilechange" element={<ProfileChange />} />
         </Routes>
     );
 };
