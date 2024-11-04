@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import styles from'./FoundPW.module.css';
-import Header from '../header/Header.js'
+import Header from '../../header/Header.js'
 
 const FoundPW = () => {
     return(
         <div className={styles["back-img"]}>
             <Header />
             <main>
-                <div>
                 <div>
                     <div className={styles.pw}>
                         <p className={styles.eng_notice}>Your passward was changed successfully.</p>
@@ -19,7 +18,6 @@ const FoundPW = () => {
                     <a href="/"><button>HOME</button></a>
                     <a href="/Login"><button>LOGIN</button></a>
                     </div>
-                </div>
                 </div>
             </main>
         </div>

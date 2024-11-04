@@ -1,22 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import styles from'./Login.module.css';
 import Header from '../header/Header.js'
 
 const Login = () => {
-    const [searchActive, setSearchActive] = useState(false);
-
-    const toggleSearch = () => {
-        setSearchActive(!searchActive);
-    };
-
-    const navigate = useNavigate();
-
-    const MyPage = () =>{
-        navigate("/MyPage")
-    };
-
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
     const [rememberId, setRememberId] = useState(false);
@@ -63,7 +50,7 @@ const Login = () => {
                             </div>
                             <div className = {styles.passward_input}>
                                 <input 
-                                    type="text" 
+                                    type="password" 
                                     id="password" 
                                     value={password} 
                                     onChange={handlePasswordChange} 
