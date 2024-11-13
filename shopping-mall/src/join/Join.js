@@ -65,7 +65,7 @@ const Join = () => {
             <Header />
             <main>
             <div className={styles.main_div}>
-                    <div className={styles.profile}>
+                    <div className={styles.join}>
                         <p>회원 가입</p>
                     </div>
                     <div className={styles.main_info}>
@@ -77,6 +77,7 @@ const Join = () => {
                             <div className={styles.input_info}>
                                 <input 
                                     type="text" 
+                                    maxLength="16"
                                     id="id" 
                                     value={id} 
                                     onChange={handleIdChange} 
@@ -92,6 +93,7 @@ const Join = () => {
                             <div className={styles.input_info}>
                                 <input 
                                     type="password" 
+                                    maxLength="16"
                                     id="pw" 
                                     value={pw} 
                                     onChange={handlePWChange} 
@@ -107,6 +109,7 @@ const Join = () => {
                             <div className={styles.input_info}>
                                 <input 
                                     type="password" 
+                                    maxLength="16"
                                     id="check_pw" 
                                     value={check_pw} 
                                     onChange={handleCheck_PWChange} 
@@ -167,21 +170,24 @@ const Join = () => {
                             </div>
                             <div className={styles.input_info3}>
                                 <input 
-                                    type="tel" 
+                                    type="text" 
+                                    maxLength="3"
                                     id="sms1" 
                                     value={sms1} 
                                     onChange={handleSMS1Change} 
                                     />
                                 <p>-</p>  
                                 <input 
-                                    type="tel" 
+                                    type="text" 
+                                    maxLength="4"
                                     id="sms2" 
                                     value={sms2} 
                                     onChange={handleSMS2Change} 
                                     />
                                 <p>-</p>
                                 <input 
-                                    type="tel" 
+                                    type="text" 
+                                    maxLength="4"
                                     id="sms3" 
                                     value={sms3} 
                                     onChange={handleSMS3Change} 

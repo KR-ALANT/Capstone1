@@ -22,13 +22,14 @@ main{
     width: 1150px;
 }
 
-.profile{
+.join{
     margin-top: 130px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .main_info{
-    display: flex;
+    display: flex;  
     flex-wrap: wrap;
     margin-top: 80px;
 }

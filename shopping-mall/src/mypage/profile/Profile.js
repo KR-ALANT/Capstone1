@@ -92,6 +92,7 @@ const Profile = () => {
                             <div className={styles.input_info}>
                                 <input 
                                     type="text" 
+                                    maxLength="16"
                                     id="id" 
                                     value={id} 
                                     onChange={handleIdChange} 
@@ -106,6 +107,7 @@ const Profile = () => {
                             <div className={styles.input_info}>
                                 <input 
                                     type="password" 
+                                    maxLength="16"
                                     id="now_pw" 
                                     value={now_pw} 
                                     onChange={handleNow_PWChange} 
@@ -120,6 +122,7 @@ const Profile = () => {
                             <div className={styles.input_info}>
                                 <input 
                                     type="password" 
+                                    maxLength="16"
                                     id="new_pw" 
                                     value={new_pw} 
                                     onChange={handleNew_PWChange} 
@@ -134,6 +137,7 @@ const Profile = () => {
                             <div className={styles.input_info}>
                                 <input 
                                     type="password" 
+                                    maxLength="16"
                                     id="check_new_pw" 
                                     value={check_new_pw} 
                                     onChange={handleCheck_New_PWChange} 
@@ -195,21 +199,24 @@ const Profile = () => {
                             </div>
                             <div className={styles.input_info4}>
                                 <input 
-                                    type="tel" 
+                                    type="text"
+                                    maxLength="3" 
                                     id="sms1" 
                                     value={sms1} 
                                     onChange={handleSMS1Change} 
                                     />
                                 <p>-</p>  
                                 <input 
-                                    type="tel" 
+                                    type="text" 
+                                    maxLength="4"
                                     id="sms2" 
                                     value={sms2} 
                                     onChange={handleSMS2Change} 
                                     />
                                 <p>-</p>
                                 <input 
-                                    type="tel" 
+                                    type="text" 
+                                    maxLength="4"
                                     id="sms3" 
                                     value={sms3} 
                                     onChange={handleSMS3Change} 
@@ -227,6 +234,7 @@ const Profile = () => {
                                         <input 
                                             type="radio" 
                                             id="sms_radio1" 
+                                            name="sms_send"
                                             value={sms_radio} 
                                             onChange={handleSMS_RadioChange} 
                                             />
@@ -234,6 +242,7 @@ const Profile = () => {
                                         <input 
                                             type="radio" 
                                             id="sms_radio2" 
+                                            name="sms_send"
                                             value={sms_radio} 
                                             onChange={handleSMS_RadioChange} 
                                             />
@@ -267,7 +276,8 @@ const Profile = () => {
                                     <div className={styles.radio_div}>
                                         <input 
                                             type="radio" 
-                                            id="email_radio1" 
+                                            id="email_radio1"
+                                            name="email_send" 
                                             value={email_radio} 
                                             onChange={handleEmail_RadioChange} 
                                             />
@@ -275,6 +285,7 @@ const Profile = () => {
                                         <input 
                                             type="radio" 
                                             id="email_radio2" 
+                                            name="email_send"
                                             value={email_radio} 
                                             onChange={handleEmail_RadioChange} 
                                             />
