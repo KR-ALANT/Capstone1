@@ -1,0 +1,187 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
+}
+
+/*메인*/
+main{
+    display: flex;
+    justify-content: center;
+    
+}
+
+/*상단 카테고리*/
+.all{
+    flex-direction: column;
+}
+.listcategory {
+    display: flex;
+    flex-direction: flexbox; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; 
+    gap: 50px;
+    width: 100%;
+}
+
+.listword {
+    text-decoration: none; /* 기본 밑줄 제거 */
+    color: #000000; /* 글자 색상 */
+    font-size: 18px; /* 글자 크기 */
+    letter-spacing: 2px; /* 자간을 2px로 설정 */
+}
+
+.listword.active {
+    background-color: #e8e8e8; /* 하이라이터 색상 */
+    color: #000(0, 0, 0); /* 텍스트 색상 */
+    padding: 5px; /* 하이라이터 여백 */
+}
+
+.listword:hover {
+    text-decoration: underline; 
+}
+/* 상품목록 */
+.productlist {
+    display: flex;
+    flex-direction: flexbox; 
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px; 
+    gap: 100px;
+    width: 100%;
+    flex-direction: column; /* 열 방향으로 정렬 */
+    align-items: center; /* 가운데 정렬 */
+}
+
+.productGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열로 나누기 */
+    gap: 100px; /* 각 상품 간의 간격 */
+}
+
+
+/* 각 상품 스타일 */
+.product {
+    width: 100%; /* 각 상품의 너비를 100%로 설정 */
+    max-width: 300px; /* 최대 너비 설정 */
+    text-align: left;
+}
+
+/* 이미지 및 정보 영역 스타일 유지 */
+.productImage {
+    width: 300px; /* 상품 이미지 너비 100% */
+    height: 450px; /* 이미지 높이 조정 */
+    background-color: #ccc; /* 네모 모양의 이미지 대체 */
+    cursor: pointer;
+}
+
+.productName {
+    font-weight: bold;
+    cursor: pointer;
+    color: #000;
+}
+
+.productInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+}
+
+.productPrice {
+    margin: 10px 0px;
+}
+
+.cart {
+    color: #000;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+/*정렬 버튼*/
+
+.sortOptions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-top: 50px;
+}
+
+.sortButton {
+    cursor: pointer;
+    font-size: 12px; /* 원하는 글자 크기로 설정 */
+    color: #222222; /* 기본 텍스트 색상 */
+    margin: 0 10px; /* 버튼 간의 여백 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.sortButton.active {
+    font-weight: bold; /* 클릭된 버튼을 볼드체로 표시 */
+}
+
+.separator {
+    color: #797979; /* 구분 기호 색상 */
+    margin: 0 5px; /* 구분 기호 간의 여백 */
+}
+
+/*페이지네이션*/
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pageButton {
+    border: 1px solid #ccc;
+    background-color: white;
+    padding: 10px 15px;
+    margin: 120px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .pageButton.active {
+    background-color: #000;
+    color: white;
+}
+
+.productHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/*찜하기*/
+.wishlistButton {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.wishlistButton.active {
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 모든 요소의 기본 스타일 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ChosunSm', serif; 
+}
+
+/* 메인 영역 스타일 */
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 제품 그리드 스타일 */
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 1300px; /* 고정 너비 */
+}
+
+/* 상품명 및 가격 스타일 */
+.productInfo {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    position: sticky;
+    top: 450px;
+    align-self: start;
+    width: 100%;
+}
+
+.productName {
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+}
+
+.productPrice {
+    margin-top: 10px;
+    color: #000;
+}
+
+/* 제품 이미지 스타일 */
+.productImage {
+    grid-column: 2;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* 장바구니 영역 스타일 */
+.cart {
+    margin-top: 10px;
+    color: #000;
+}
+
+/* 사이즈, 색상, 개수 선택 옵션 스타일 */
+.productOptions {
+    width: 100%;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 400px;
+    align-items: center;
+}
+
+.productOptions label {
+    font-size: 16px;
+    color: #000;
+}
+
+/* 제품 행동 버튼 스타일 */
+.productButton {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.productActions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* 공통 버튼 스타일 */
+.actionButton {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 5px 40px;
+    cursor: pointer;
+}
+
+.actionButton.active {
+    background-color: black;
+    color: white;
+}
+
+.actionButton:hover {
+    background-color: black;
+    color: white;
+}
+
+/* 드롭다운 스타일 */
+.optionSelect,
+.optionInput {
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    margin-left: 10px;
+}
+
+.optionSelect:focus,
+.optionInput:focus {
+    border-color: black;
+    outline: none;
+}
+
+/* 상세 정보 스타일 */
+.detailContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    grid-column: span 3;
+}
+
+.detailImage {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.detailText {
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+}
+
+/* 리뷰 및 문의 섹션 스타일 */
+.reviewSection, .qaSection {
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1300px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.allListButton, .listButton, .writeButton {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    padding: 5px 40px;
+    cursor: pointer;
+}
+
+.horizontalLine {
+    border: none;
+    height: 2px;
+    background-color: black;
+    width: 1300px;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.listButton, .writeButton {
+    margin-left: 10px;
+}
+
+/* 문의 테이블 스타일 */
+.inquiryTable {
+    width: 1300px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.inquiryTable th, .inquiryTable td {
+    border: none;
+    padding: 10px;
+    text-align: left;
+    color: black;
+}
+
+.inquiryTable th {
+    background-color: #f2f2f2;
+}
+
+.inquiryTable th:nth-child(1),
+.inquiryTable td:nth-child(1) {
+    width: 100px;
+}
+
+.inquiryTable th:nth-child(2),
+.inquiryTable td:nth-child(2) {
+    width: 500px;
+}
+
+.inquiryTable th:nth-child(3),
+.inquiryTable td:nth-child(3) {
+    width: 100px;
+}
+
+.inquiryTable th:nth-child(4),
+.inquiryTable td:nth-child(4) {
+    width: 100px;
+}
+
