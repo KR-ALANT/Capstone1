@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import styles from'./ForgotPW.module.css';
-import Header from '../header/Header.js'
+import styles from'./ForgotID.module.css';
+import Header from '../../header/Header.js'
 
-const ForgotPW = () => {
+const ForgotID = () => {
     const [selectedOption, setSelectedOption] = useState('option1');
 
     const handleOptionChange = (event) => {
@@ -16,8 +16,8 @@ const ForgotPW = () => {
             <Header />
             <main>
                 <div>
-                    <div className={styles.pw}>
-                        <p>PW</p>
+                    <div className={styles.id}>
+                        <p>ID</p>
                     </div>
                     <div className={styles.radio_div}>
                         <div className={styles.radioB}>
@@ -48,7 +48,7 @@ const ForgotPW = () => {
                             </div>
                             )}
                             {selectedOption === 'option2' && (
-                            <div>
+                            <div className={styles.option2}>
                                 <div className={styles.name}>
                                     <p>NAME</p>
                                     <input type="text" />
@@ -70,4 +70,4 @@ const ForgotPW = () => {
     )
 }
 
-export default ForgotPW;
+export default ForgotID;

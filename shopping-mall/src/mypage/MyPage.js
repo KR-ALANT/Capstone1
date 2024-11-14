@@ -21,6 +21,14 @@ const MyPage = () => {
     navigate("/Rating")
   }
 
+  const MyOrder = () =>{
+    navigate("/Order")
+  }
+
+  const MyProfile = () => {
+    navigate("/Profile")
+  }
+
   return (
     /*사이트 전체*/
     <div>
@@ -122,7 +130,7 @@ const MyPage = () => {
           {/*Order, Profile, Wishlist, Board*/}
           <div className={styles["every-page"]}>
             {/*order 전체*/}
-            <button className={styles.order}>
+            <button className={styles.order} onClick={MyOrder}>
               {/*Order 아이콘*/}
               <FontAwesomeIcon icon={faClipboard} style={{width: "35px", height: "35px"}}/>
               {/*Order*/}
@@ -131,7 +139,7 @@ const MyPage = () => {
               <p className={styles["order-explanation"]}>고객님께서 주문하신 상품의 주문내역을<br></br> 확인하실 수 있습니다.</p>
             </button>
             {/*Profile 전체*/}
-            <button className={styles.profile}>
+            <button className={styles.profile} onClick={MyProfile}>
               {/*Profile 아이콘*/}
               <FontAwesomeIcon icon={faAddressCard} style={{width: "35px", height: "35px"}} />
               {/*Profile*/}

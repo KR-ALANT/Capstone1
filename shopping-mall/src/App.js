@@ -6,12 +6,17 @@ import Mypage from './mypage/MyPage';
 import Point from './mypage/point/Point';
 import Coupon from './mypage/coupon/MyCoupon';
 import Login from './login/Login';
+import Join from './join/Join';
 import Faq from './faq/Faq';
 import Cart from './cart/Cart';
-import Rating from './mypage/rating/Rating';
 import Footer from './footer/Footer';
-import ForgotID from './forgotid/ForgotID'
-import ForgotPW from './forgotpw/ForgotPW'
+import Rating from './mypage/rating/Rating'
+import Profile from './mypage/profile/Profile'
+import ForgotID from './login/forgotid/ForgotID'
+import ForgotPW from './login/forgotpw/ForgotPW'
+import FoundID from './login/foundid/FoundID'
+import FoundPW from './login/foundpw/FoundPW'
+import Order from './mypage/order/MyOrder'
 
 const App = () => {
     return (
@@ -22,12 +27,17 @@ const App = () => {
             <Route path="/point" element={<Point />} />
             <Route path="/coupon" element={<Coupon />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/join" element={<Join />} />
             <Route path="/forgotid" element={<ForgotID />} />
+            <Route path="/foundid" element={<FoundID />} />
             <Route path="/forgotpw" element={<ForgotPW />} />
+            <Route path="/foundpw" element={<FoundPW />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/rating" element={<Rating />} />
             <Route path="/footer" element={<Footer />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/order" element={<Order />} />
         </Routes>
     );
 };

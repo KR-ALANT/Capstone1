@@ -15,7 +15,9 @@ const Header = () => {
             <header>
                 <div className="menu-bar">
                     <input type="checkbox" id="menu-toggle" />
+                    <div className="menu1">
                     <label htmlFor="menu-toggle" className="menu-icon">&#9776;</label>
+                    </div>
                     <nav className="menu">
                         <label htmlFor="menu-toggle" className="close-icon">X</label>
                         <div className="menu-bottom">
@@ -37,11 +39,13 @@ const Header = () => {
                         </div>
                     </nav>
                 </div>
+                <div className="main-logo">
                     <a href='/' className='main'>
                         <img src={`${process.env.PUBLIC_URL}/image/logo.png`} alt="Logo" className="logo" />
                     </a>
+                </div>
                 <div className="header-icons">
-                    <a href="#" className="icon">join</a>
+                    <a href="/Join" className="icon">join</a>
                     <a href="/Login" className="icon">login</a>
                     <a href="/MyPage" className="icon" >mypage</a>
                     <a href="#" className="icon" onClick={toggleSearch}>search</a>
