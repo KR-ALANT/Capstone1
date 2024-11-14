@@ -14,18 +14,17 @@ const Rating = () =>{
       <main>
         <div>
           {/*Rating*/}
-          <div className={styles.mr}>
-            <p>Rating</p>
-          </div>
-          {/*등급 문구 바깥 큰 테두리*/}
-          <div className={styles.yourrating}>
-            {/*등급 문구 전체*/}
-            <div className={styles["yourrating-content"]}>
-              <p className={styles["yourrating-content-k"]}>당신은</p>
-              <p className={styles["yourrating-content-n"]}>5</p>
-              <p className={styles["yourrating-content-e"]}>th</p>
-              <p className={styles["yourrating-content-k"]}>등급이다.</p>
-            </div>
+          <div className={styles.sty}>
+            <p className={styles.your}> your </p>
+            <p className={styles.S}>S</p>
+            <p className={styles.dot}>.</p>
+            <p className={styles.T}>T</p>
+            <p className={styles.dot}>.</p>
+            <p className={styles.Y}>Y</p>
+            <p className={styles.dot}>.</p>
+            <p className={styles.L}>L</p>
+            <p className={styles.dot}>.</p>
+            <p className={styles.E}>E</p>
           </div>
           {/*등급 설명 및 원 그래프 바깥 큰 테두리*/}
           <div className={styles.myrating}>
@@ -36,11 +35,21 @@ const Rating = () =>{
               {/*원 만드는 방법*/}
               <Nav.Item className={styles.circle}>
                   {/*원 5등분을 한 후 그에 맞게 탭으로 설정*/}
-                  <Nav.Link onClick={()=>{setTab(5)}} eventKey="link5" className={styles.slice}></Nav.Link>
-                  <Nav.Link onClick={()=>{setTab(4)}} eventKey="link4" className={styles.slice}></Nav.Link>
-                  <Nav.Link onClick={()=>{setTab(3)}} eventKey="link3" className={styles.slice}></Nav.Link>
-                  <Nav.Link onClick={()=>{setTab(2)}} eventKey="link2" className={styles.slice}></Nav.Link>
-                  <Nav.Link onClick={()=>{setTab(1)}} eventKey="link1" className={styles.slice}></Nav.Link>
+                  <Nav.Link onClick={()=>{setTab(1)}} eventKey="link1" className={styles.slice}>
+                    <p className={styles["slice1"]}>S</p>
+                  </Nav.Link>
+                  <Nav.Link onClick={()=>{setTab(2)}} eventKey="link2" className={styles.slice}>
+                    <p className={styles["slice2"]}>T</p>
+                  </Nav.Link>
+                  <Nav.Link onClick={()=>{setTab(3)}} eventKey="link3" className={styles.slice}>
+                    <p className={styles["slice3"]}>Y</p>
+                  </Nav.Link>
+                  <Nav.Link onClick={()=>{setTab(4)}} eventKey="link4" className={styles.slice}>
+                    <p className={styles["slice4"]}>L</p>
+                  </Nav.Link>
+                  <Nav.Link onClick={()=>{setTab(5)}} eventKey="link5" className={styles.slice}>
+                    <p className={styles["slice5"]}>E</p>
+                  </Nav.Link>
               </Nav.Item>
             </Nav>
           </div>
