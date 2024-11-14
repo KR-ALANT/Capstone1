@@ -261,6 +261,7 @@ const Profile = () => {
                                 <input 
                                     type="email" 
                                     id="email" 
+                                    style={{ width: '200px' }}
                                     value={email} 
                                     onChange={handleEmailChange} 
                                     />   
