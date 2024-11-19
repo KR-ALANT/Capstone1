@@ -86,7 +86,6 @@ const All = () => {
                         <span className={styles.separator}>〡</span>
                         <span className={`${styles.sortButton} ${sortOption === 'best' ? styles.active : ''}`} onClick={() => sortProducts('best')}>BEST</span>
                     </div>
-
                     <div className={styles.productlist}>
                         <div className={styles.productGrid}>
                             {currentProducts.map(product => (
