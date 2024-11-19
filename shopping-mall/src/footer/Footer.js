@@ -6,7 +6,7 @@ function Footer() {
         <div className={style['Footer']}>
             <p>COMPANY : F.M.  CEO : 이채원</p>
             <p>COMPANY_REGNO : [033-760-8114]</p>
-            <p>ADD : 강원도 원주시 흥업면 남원로 150 여운 CPO : 이채원(jennyq02@naver.com)</p>
+            <p>ADD : 강원도 원주시 흥업면 남원로 150  CPO : 이채원(jennyq02@naver.com)</p>
             <p>신한 / 000-000000 : 이채원(F.M.)</p><br></br>
             <p>CS Center : AM11:00 ~ PM17:00</p>
             <p>Lunch time PM12:00~13:00</p>
