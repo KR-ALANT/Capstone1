@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Point.module.css';
-import Header from '../../header/Header.js'
+import Header from '../../header/Header.js';
+import Footer from '../../footer/Footer.js';
 
 const Point = () => {
   const navigate = useNavigate();
@@ -108,6 +109,7 @@ const Point = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
