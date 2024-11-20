@@ -24,6 +24,7 @@ import Outer from './preview/Outer';
 import Top from './preview/Top';
 import Bottom from './preview/Bottom';
 import Etc from './preview/Etc';*/
+import Detail from './detail/Alldetail';
 
 const App = () => {
     return (
@@ -54,6 +55,7 @@ const App = () => {
             <Route path="/bottom" element={<Bottom />} />
             <Route path="/etc" element={<Etc />} />
             */}
+            <Route path="/detail" element={<Detail />} />
         </Routes>
     );
 };
