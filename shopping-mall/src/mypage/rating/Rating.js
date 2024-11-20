@@ -3,7 +3,7 @@ import styles from './Rating.module.css';
 import Header from '../../header/Header.js'
 import { Nav } from 'react-bootstrap'
 import RatingNav from './RatingNav.js';
-
+import Footer from '../../footer/Footer.js';
 
 const Rating = () =>{
   let [tab, setTab] = useState(0)
@@ -77,6 +77,7 @@ const Rating = () =>{
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }
