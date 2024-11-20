@@ -4,7 +4,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from'./MyPage.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Header from '../header/Header.js'
+import Header from '../header/Header.js';
+import Footer from '../footer/Footer.js';
+
 
 const MyPage = () => {
   const navigate = useNavigate();
@@ -168,6 +170,7 @@ const MyPage = () => {
           </div>
         </div>
         </main>
+        <Footer />
     </div>
   );
 };
