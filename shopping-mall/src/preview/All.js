@@ -4,7 +4,6 @@ import styles from './All.module.css';
 import Header from '../header/Header.js';
 
 const All = () => {
-    const [searchActive, setSearchActive] = useState(false);
     const [wishlist, setWishlist] = useState([]);
     const [sortOption, setSortOption] = useState('name');
     const [currentPage, setCurrentPage] = useState(1);
@@ -113,7 +112,7 @@ const All = () => {
 
                     <div className={styles.pagination}>
                         {Array.from({ length: totalPages }, (_, index) => (
-                            <button 
+                            <button
                                 key={index + 1} 
                                 className={`${styles.pageButton} ${currentPage === index + 1 ? styles.active : ''}`} 
                                 onClick={() => handlePageChange(index + 1)}
