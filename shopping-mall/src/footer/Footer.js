@@ -13,7 +13,7 @@ function Footer() {
             <p>WEEKEND / HOLIDAY OFF</p>
             <div className={style['Footer-links']}>
                 <a href="/">HOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="#instagram">INSTAGRAM</a>
+                <a href="https://www.instagram.com/chxx_won/">INSTAGRAM</a>
             </div>
         </div>
     );
