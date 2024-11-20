@@ -1,8 +1,9 @@
 import {React, useState} from "react";
 import styles from './MyOrder.module.css'
-import Header from '../../header/Header'
-import { Nav } from 'react-bootstrap'
-import MyOrderNav from './MyOrderNav'
+import Header from '../../header/Header';
+import { Nav } from 'react-bootstrap';
+import MyOrderNav from './MyOrderNav/MyOrderNav';
+import Footer from '../../footer/Footer';
 
 const MyOrder = () =>{
   let [tab, setTab] = useState(0)
@@ -27,6 +28,7 @@ const MyOrder = () =>{
           </Nav>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

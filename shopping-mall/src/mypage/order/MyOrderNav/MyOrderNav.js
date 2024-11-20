@@ -2,23 +2,14 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { React, useState } from 'react';
 import styles from './MyOrderNav.module.css'
-import { Dropdown } from './Dropdwon';
-import CustomCalendar from './Calendar';
-import moment from "moment";
+import { Dropdown } from './Dropdown/Dropdwon';
+import CustomCalendar from './Calendar/Calendar';
 
 
 const smapleData = {data : ["전체 주문처리상태", "입금전", "배송준비중", "배송중", "배송완료", "취소", "교환", "반품"]}
 
 const MyOrderNav = ({ tab }) =>{
   const [value, onChange] = useState(new Date());
-  const [nowDate, setNowDate] = useState();
-  const [isOpen, setIsOpen] = useState(false);
-  
-  const handleDateChange = (selectedDate) => {
-    onChange(selectedDate);
-    setIsOpen(false);
-    setNowDate(moment(selectedDate).format("YYYY년 MM월 DD일"));
-  };
 
   if (tab===0){
     return(
@@ -31,7 +22,7 @@ const MyOrderNav = ({ tab }) =>{
                 <Dropdown props={smapleData} />
               </div>
               <div className={styles.cal}>
-                <CustomCalendar onChange={handleDateChange} value={value}></CustomCalendar>
+                <CustomCalendar onChange={onChange} value={value}></CustomCalendar>
               </div>
             </div>
           </div>
@@ -101,7 +92,7 @@ const MyOrderNav = ({ tab }) =>{
             <div className={styles["ops1"]}>
               {/*전체 주문처리 상태*/}
               <div className={styles.cal}>
-                <CustomCalendar onChange={handleDateChange} value={value}></CustomCalendar>
+                <CustomCalendar onChange={onChange} value={value}></CustomCalendar>
               </div>
             </div>
           </div>
@@ -167,7 +158,7 @@ const MyOrderNav = ({ tab }) =>{
             <div className={styles["ops1"]}>
               {/*전체 주문처리 상태*/}
               <div className={styles.cal}>
-                <CustomCalendar onChange={handleDateChange} value={value}></CustomCalendar>
+                <CustomCalendar onChange={onChange} value={value}></CustomCalendar>
               </div>
             </div>
           </div>
