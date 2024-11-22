@@ -2,11 +2,12 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { React, useState } from 'react';
 import styles from './MyOrderNav.module.css'
-import { Dropdown } from './Dropdown/Dropdwon';
+import { Dropdown } from './Dropdown/Dropdown';
+import { PastDropdown } from './Dropdown/PastDropdown';
 import CustomCalendar from './Calendar/Calendar';
 
-
-const smapleData = {data : ["전체 주문처리상태", "입금전", "배송준비중", "배송중", "배송완료", "취소", "교환", "반품"]}
+const orderData = {data : ["전체 주문처리상태", "입금전", "배송준비중", "배송중", "배송완료", "취소", "교환", "반품"]};
+const pastData = {data : ["2025", "2024"]};
 
 const MyOrderNav = ({ tab }) =>{
   const [value, onChange] = useState(new Date());
@@ -19,7 +20,7 @@ const MyOrderNav = ({ tab }) =>{
             <div className={styles["ops"]}>
               {/*전체 주문처리 상태*/}
               <div className={styles.drop}>
-                <Dropdown props={smapleData} />
+                <Dropdown props={orderData} />
               </div>
               <div className={styles.cal}>
                 <CustomCalendar onChange={onChange} value={value}></CustomCalendar>
@@ -157,8 +158,8 @@ const MyOrderNav = ({ tab }) =>{
           <div className={styles["order-processing-status"]}>
             <div className={styles["ops1"]}>
               {/*전체 주문처리 상태*/}
-              <div className={styles.cal}>
-                <CustomCalendar onChange={onChange} value={value}></CustomCalendar>
+              <div className={styles.drop}>
+                <PastDropdown props={pastData} />
               </div>
             </div>
           </div>
