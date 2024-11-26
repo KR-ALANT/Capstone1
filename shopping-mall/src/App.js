@@ -25,6 +25,8 @@ import Top from './preview/Top';
 import Bottom from './preview/Bottom';
 import Etc from './preview/Etc';*/
 import Detail from './detail/Alldetail';
+import Wishlist from './mypage/wishlist/Wishlist'
+import Board from './mypage/board/Board'
 
 const App = () => {
     return (
@@ -56,6 +58,8 @@ const App = () => {
             <Route path="/etc" element={<Etc />} />
             */}
             <Route path="/detail" element={<Detail />} />
+            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/board" element={<Board />} />
         </Routes>
     );
 };

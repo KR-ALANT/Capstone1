@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
+}
+
+/* 메인 */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.back-img {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px; /* 상단 여백 조정 */
+}
+
+.mainContent {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 상단 정렬 */
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.productContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px; /* 컨테이너와 제목 사이 여백 */
+}
+
+.emptyMessage {
+    color: #666;
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+.productTable th {
+    background-color: #f4f4f4;
+}
+
+.productTable td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+    height: 50px; /* 셀 높이 */
+    box-sizing: border-box; /* padding과 border 포함된 크기 계산 */
+}
+
+.productImage {
+    max-width: 70px; /* 이미지 너비 최대 제한 */
+    max-height: 100px; /* 이미지 높이 최대 제한 */
+    object-fit: contain; /* 이미지 비율 유지 */
+}
+
+/* 각 행(tr)의 높이를 설정하여 셀 높이 적용 */
+.productTable tr {
+    height: 50px; /* 각 행의 높이를 설정 */
+}
+
+.productTable tr:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* 각 상품 항목 간의 구분선 */
+}
+
+.productTable {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* 고정된 테이블 레이아웃 적용 */
+}
+
+.productTable th, .productTable td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* 각 셀의 너비 설정 (픽셀 기준) */
+.productTable th:nth-child(1), .productTable td:nth-child(1) {
+    width: 50px; /* 첫 번째 열: 체크박스 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.productTable th:nth-child(2), .productTable td:nth-child(2) {
+    width: 150px; /* 두 번째 열: 이미지 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.productTable th:nth-child(3), .productTable td:nth-child(3) {
+    width: 400px; /* 세 번째 열: 상품 정보 */
+    text-align: left; /* 좌측 정렬 */
+}
+
+.productTable th:nth-child(4), .productTable td:nth-child(4) {
+    width: 200px; /* 네 번째 열: 판매가 */
+    text-align: center; /* 우측 정렬 */
+}
+
+.productTable th:nth-child(5), .productTable td:nth-child(5) {
+    width: 150px; /* 다섯 번째 열: 선택 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.product:last-child td {
+    border-bottom: none;
+}
+
+/* 버튼 스타일 */
+.deleteButton, .deleteSelectedButton {
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.deleteSelectedButton {
+    margin-top: 20px;
+}
+
+.deleteButton:hover, .deleteSelectedButton:hover {
+    background-color: #e8e8e8;
+}

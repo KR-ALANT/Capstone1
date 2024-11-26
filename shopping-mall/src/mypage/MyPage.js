@@ -30,6 +30,13 @@ const MyPage = () => {
   const MyProfile = () => {
     navigate("/Profile")
   }
+  const MyWishlist = () => {
+    navigate("/Wishlist")
+  }
+
+  const MyBoard = () => {
+    navigate("/Board")
+  }
 
   return (
     /*사이트 전체*/
@@ -150,7 +157,7 @@ const MyPage = () => {
               <p className={styles["profile-explanation"]}>회원이신 고객님의<br></br> 개인정보를 관리하는 공간입니다.</p>
             </button>
             {/*Wishlist 전체*/}
-            <button className={styles.wishlist}>
+            <button className={styles.wishlist} onClick={MyWishlist}> 
               {/*Wishlist 아이콘*/}
               <FontAwesomeIcon icon={faHeart} style={{width: "35px", height: "35px"}} />
               {/*Wishlist*/}
@@ -159,7 +166,7 @@ const MyPage = () => {
               <p className={styles["wishlist-explanation"]}>관심상품으로 등록하신 상품의 목록을<br></br> 보여드립니다.</p>
             </button>
             {/*Board 전체*/}
-            <button className={styles.board}>
+            <button className={styles.board} onClick={MyBoard}>
               {/*Board 아이콘*/}
               <FontAwesomeIcon icon={faClipboardCheck} style={{width: "35px", height: "35px"}} />
               {/*Board*/}

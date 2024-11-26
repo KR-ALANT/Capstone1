@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+    font-family: 'GowunBatang-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunSm';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ChosunSm', serif; /* 전체 프로젝트에 폰트 적용 */
+}
+
+ /* 메인 */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.back-img {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.mainContent {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 상단 정렬 */
+}
+
+.title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tabContainer {
+    position: absolute; /* 테이블 위에 고정 */
+    top: -50px; /* 상단 위치 조정 */
+    left: 0; /* 왼쪽으로 고정 */
+    display: flex;
+    gap: 10px;
+    padding: 5px 10px;
+    border-radius: 5px; /* 모서리 둥글게 */
+    z-index: 10; /* 다른 요소 위에 표시 */
+}
+
+.tabButton {
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+
+.tabButton.active {
+    background-color: #686868; /* 활성화된 버튼 색 */
+    color: #ffffff;
+    border-color: #f5f5f5;
+}
+
+.contentContainer {
+    margin-top: 60px; /* 탭 버튼과 테이블 사이의 간격 */
+    position: relative; /* 자식 요소 기준점 */
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tableWrapper {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.table tr:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* 각 상품 항목 간의 구분선 */
+}
+
+.table th,
+.table td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1rem; /* 폰트 사이즈 고정 */
+}
+
+.table th {
+    background-color: #f4f4f4;
+}
+
+/* 각 열 너비 설정 */
+.table .number {
+    width: 20px; /* 번호 열 */
+}
+
+.table .product {
+    width: 300px; /* 상품 정보 열 */
+}
+
+.table .title {
+    width: 500px; /* 제목 열 */
+}
+
+.table .edit {
+    width: 100px; /* 수정하기 열 */
+}
+
+.table .date {
+    width: 150px; /* 작성일 열 */
+}
+
+.table .type {
+    width: 150px; /* 유형 열 (Q&A) */
+}
+
+
+.table td {
+    height: 50px; /* 셀 높이 */
+    cursor: pointer;
+}
+
+/* 텍스트 정렬 설정 */
+.table td.product, .table th.product {
+    text-align: center; /* 상품 정보 열은 중앙 정렬 */
+}
+
+.table th.title{
+    text-align: center;
+}
+
+.table td.title {
+    text-align: left; /* 제목 열은 왼쪽 정렬 */
+}
+
+.table td.date, .table th.date {
+    text-align: center; /* 날짜 열은 중앙 정렬 */
+}
+
+.editButton {
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    width: 100px
+}
+
+.editButton:hover {
+    background-color: #e8e8e8;
+}
+
+.emptyMessage {
+    text-align: center;
+    padding: 15px;
+    color: #999;
+    font-style: italic;
+}
