@@ -10,7 +10,7 @@ const All = () => {
     const itemsPerPage = 9;
     const location = useLocation();
     const [products, setProducts] = useState([
-        { id: 1, path: '/all/1', name: '상품명 1', price: 100000, image: `${process.env.PUBLIC_URL}/image/pink.jpeg`, date: new Date(2023, 10, 1), popularity: 5 },
+        { id: 1, path: '/detail', name: '상품명 1', price: 100000, image: `${process.env.PUBLIC_URL}/image/pink.jpeg`, date: new Date(2023, 10, 1), popularity: 5 },
         { id: 2, name: '상품명 2', price: 200000, image: `${process.env.PUBLIC_URL}/image/blue.jpeg`, date: new Date(2023, 9, 15), popularity: 3 },
         { id: 3, name: '상품명 3', price: 150000, image: `${process.env.PUBLIC_URL}/image/black.jpeg`, date: new Date(2023, 8, 20), popularity: 4 },
         { id: 4, name: '상품명 4', price: 120000, image: `${process.env.PUBLIC_URL}/image/pink.jpeg`, date: new Date(2023, 9, 10), popularity: 2 },
