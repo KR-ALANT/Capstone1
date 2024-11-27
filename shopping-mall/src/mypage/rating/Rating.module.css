@@ -1,222 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
-@font-face {
-    font-family: 'GowunBatang-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+.back-img1{
+    background-color: #ffffff;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
-@font-face {
-    font-family: 'ChosunSm';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-.sty{
+.container {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 1500px;
-    margin-top: 70px;
-    font-size: 2rem;
-}
-
-.E{
-    font-size: 2.7rem;
-}
-
-.your{
-    margin-right: 10px;
-}
-
-/*등급 문구 바깥 큰 테두리*/
-.yourrating{
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    width: 1400px;
-    height: 181.5px;
-    border-top: 1px solid #1F1F1F;
-    border-bottom: 1px solid #1F1F1F;
-    background-color: #F5F5F5;
-    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    margin-top: 20px;
+}
+
+.gradeBox {
+    margin: 120px 0;
+    padding: 10px 100px;
+    border: 2px solid #e8e8e8;
+    font-size: 22px;
+    text-align: center;
     font-weight: bold;
+    background-color: #f8f8f8;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*등급 문구 전체*/
-.yourrating-content{
+.styleText {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-/*등급 문구 한글*/
-.yourrating-content-k{
+    gap: 40px;
+    font-size: 50px;
     font-weight: bold;
-    font-size: 1.2rem;
-    padding-left: 10px;
-    padding-right: 10px;
+    letter-spacing: 15px;
+    color: black;
+    margin-top: -60px;
+    cursor: pointer;
 }
 
-/*등급 문구 숫자*/
-.yourrating-content-n{
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-decoration: underline;
+.letter {
+    display: inline-block;
+    animation: fadeIn 0.5s ease-in;
 }
 
-/*등급 문구 영어*/
-.yourrating-content-e{
-    font-weight: bold;
-    font-size: 1.2rem;
+.letter:hover {
+    color: #c9c9c9;
+    transform: scale(1.1);
 }
 
-/*등급 설명 및 원 그래프 바깥 큰 테두리*/
-.myrating{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1500px;
-    height: 550px;
-    margin-top: 100px;
+.active {
+    color: #c9c9c9;
 }
 
-/*등급 설명 및 원 그래프*/
-.circle-result{
-    display: flex;
-    align-items: center;
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-
-.circle{
-    display: block;
-    justify-content: center;
-    width: 800px;
+.benefitsBox {
+    margin-top: 60px;
+    padding: 30px 50px;
+    background-color: #f0f0f0;
+    text-align: center;
+    width: 60%;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
 }
 
-.slice{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin-left: 100px;
-    text-decoration: none;
+.benefitsBox h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
 }
 
-
-.slice5{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: #1F1F1F;
-    text-decoration: none;
-    border: 1px solid #1F1F1F;
-    width: 500px;
-    height: 100px;
+.benefitsContent {
+    margin: 10px 0 0;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
 }
 
-.slice4{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: #1F1F1F;
-    text-decoration: none;
-    border-top: 1px solid #1F1F1F;
-    border-right: 1px solid #1F1F1F;
-    border-left: 1px solid #1F1F1F;
-    width: 400px;
-    height: 100px;
-}
-
-.slice3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: #1F1F1F;
-    text-decoration: none;
-    border-top: 1px solid #1F1F1F;
-    border-right: 1px solid #1F1F1F;
-    border-left: 1px solid #1F1F1F;
-    width: 300px;
-    height: 100px;
-}
-
-.slice2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: #1F1F1F;
-    text-decoration: none;
-    border-top: 1px solid #1F1F1F;
-    border-right: 1px solid #1F1F1F;
-    border-left: 1px solid #1F1F1F;
-    width: 200px;
-    height: 100px;
-
-}
-
-.slice1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: #1F1F1F;
-    text-decoration: none;
-    border-top: 1px solid #1F1F1F;
-    border-right: 1px solid #1F1F1F;
-    border-left: 1px solid #1F1F1F;
-    width: 100px;
-    height: 100px;
-}
-
-/*유의사항 전체*/
-.guide-precautions{
-    display: block;
-    width: 1400px;
-    height: 107.5px;;
-    margin-top: 102px;
-    border-top: 1px solid #1f1f1f;
-    border-bottom: 1px solid #1f1f1f;
-    color: #1f1f1f;
-    font-weight: bold;
-    background-color: #f5f5f5;
-}
-
-/*유의사항*/
-.precautions{
-    display: flex;
-    justify-items: left;
-    align-items: center;
-    font-size: 1rem;
-    height: 30px;
-    margin-left: 10px;
-}
-
-/*유의사항 문구 전체*/
-.guide-precautions-content{
-    font-size: 0.8rem;
-    display: block;
-    border-top: 1px solid #1f1f1f;
-    background-color: #fff;
-}
-
-/*유의사항 문구*/
-.guide-content{
-    display: flex;
-    justify-items: left;
-    align-items: center;
-}
-
-/*유의사항 숫자들*/
-.number{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
+h5 {
+    color: #a7a7a7;
 }
