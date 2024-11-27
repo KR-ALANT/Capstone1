@@ -10,7 +10,7 @@ const All = () => {
     const [currentPage] = useState(1); // 현재 페이지 상태
     const itemsPerPage = 6; // 페이지 당 아이템 수
     const [products] = useState([ // 제품 데이터 (예시)
-        { id: 1, path: '/all/1', name: '상품명 1', price: 100000, image: `${process.env.PUBLIC_URL}/image/pink.jpeg`, date: new Date(2023, 10, 1), popularity: 5 },
+        { id: 1, path: '/detail', name: 'fleece high neck padded jacket', price: 100000, image: `${process.env.PUBLIC_URL}/image/cloth/1.jpg`, date: new Date(2023, 10, 1), popularity: 5 },
     ]);
 
     // 현재 페이지의 제품 인덱스 계산
@@ -43,7 +43,7 @@ const All = () => {
                             <Link to={product.path} className={styles.productImage}>
                                 <img src={product.image} alt={product.name} className={styles.productImage} />
                             </Link>
-    
+                           
                             {/* 제품 옵션과 액션 버튼 */}
                             <div className={styles.productOptions}>
                                 {/* 사이즈, 색상, 개수 선택 */}
@@ -82,7 +82,7 @@ const All = () => {
     
                             {/* 상세정보 영역 */}
                             <div className={styles.detailContent}>
-                                <img src={`${process.env.PUBLIC_URL}/image/blue.jpeg`} alt="추가 이미지" className={styles.detailImage} />
+                                <img src={`${process.env.PUBLIC_URL}/image/cloth/1_1.jpg`} alt="추가 이미지" className={styles.detailImage} />
                                 <p className={styles.detailText}>이것은 추가적인 텍스트입니다.</p>
                             </div>
                         </div>
