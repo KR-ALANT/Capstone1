@@ -10,12 +10,15 @@ const All = () => {
     const itemsPerPage = 9;
     const location = useLocation();
     const [products, setProducts] = useState([
-        { id: 1, path: '/detail', name: '상품명 1', price: 100000, image: `${process.env.PUBLIC_URL}/image/pink.jpeg`, date: new Date(2023, 10, 1), popularity: 5 },
-        { id: 2, name: '상품명 2', price: 200000, image: `${process.env.PUBLIC_URL}/image/blue.jpeg`, date: new Date(2023, 9, 15), popularity: 3 },
-        { id: 3, name: '상품명 3', price: 150000, image: `${process.env.PUBLIC_URL}/image/black.jpeg`, date: new Date(2023, 8, 20), popularity: 4 },
+        { id: 1, path: '/detail', name: '상품명 1', price: 100000, image: `${process.env.PUBLIC_URL}/image/cloth/1.jpg`, date: new Date(2023, 10, 1), popularity: 5 },
+        { id: 2, name: '상품명 2', price: 200000, image: `${process.env.PUBLIC_URL}/image/cloth/2.jpg`, date: new Date(2023, 9, 15), popularity: 3 },
+        { id: 3, name: '상품명 3', price: 150000, image: `${process.env.PUBLIC_URL}/image/cloth/3.jpg`, date: new Date(2023, 8, 20), popularity: 4 },
         { id: 4, name: '상품명 4', price: 120000, image: `${process.env.PUBLIC_URL}/image/pink.jpeg`, date: new Date(2023, 9, 10), popularity: 2 },
         { id: 5, name: '상품명 5', price: 80000, image: `${process.env.PUBLIC_URL}/image/blue.jpeg`, date: new Date(2023, 10, 5), popularity: 1 },
         { id: 6, name: '상품명 6', price: 250000, image: `${process.env.PUBLIC_URL}/image/black.jpeg`, date: new Date(2023, 7, 30), popularity: 4 },
+        { id: 7, name: '상품명 7', price: 120000, image: `${process.env.PUBLIC_URL}/image/pink.jpeg`, date: new Date(2023, 9, 10), popularity: 7 },
+        { id: 8, name: '상품명 8', price: 80000, image: `${process.env.PUBLIC_URL}/image/blue.jpeg`, date: new Date(2023, 10, 5), popularity: 8 },
+        { id: 9, name: '상품명 9', price: 250000, image: `${process.env.PUBLIC_URL}/image/black.jpeg`, date: new Date(2023, 7, 30), popularity: 9 },
         { id: 7, name: '상품명 7', price: 120000, image: `${process.env.PUBLIC_URL}/image/pink.jpeg`, date: new Date(2023, 9, 10), popularity: 7 },
         { id: 8, name: '상품명 8', price: 80000, image: `${process.env.PUBLIC_URL}/image/blue.jpeg`, date: new Date(2023, 10, 5), popularity: 8 },
         { id: 9, name: '상품명 9', price: 250000, image: `${process.env.PUBLIC_URL}/image/black.jpeg`, date: new Date(2023, 7, 30), popularity: 9 },
