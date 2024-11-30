@@ -1,84 +1,95 @@
-import { React, useState } from 'react';
+import React, { useState } from 'react';
+import Header from '../../header/Header.js';
 import styles from './Rating.module.css';
-import Header from '../../header/Header.js'
-import { Nav } from 'react-bootstrap'
-import RatingNav from './RatingNav.js';
 
+const Rating1 = ({ grade }) => {
+    const [selectedGrade, setSelectedGrade] = useState(null);
 
-const Rating = () =>{
-  let [tab, setTab] = useState(0)
+    const gradeDescriptions = {
+        S: 'Sensual',
+        T: 'Trendy',
+        Y: 'Youth',
+        L: 'Learn',
+        E: 'Enjoy',
+    };
 
-  return(
-    <div>
-      <Header />
-      <main>
-        <div>
-          {/*Rating*/}
-          <div className={styles.sty}>
-            <p className={styles.your}> your </p>
-            <p className={styles.S}>S</p>
-            <p className={styles.dot}>.</p>
-            <p className={styles.T}>T</p>
-            <p className={styles.dot}>.</p>
-            <p className={styles.Y}>Y</p>
-            <p className={styles.dot}>.</p>
-            <p className={styles.L}>L</p>
-            <p className={styles.dot}>.</p>
-            <p className={styles.E}>E</p>
-          </div>
-          {/*등급 설명 및 원 그래프 바깥 큰 테두리*/}
-          <div className={styles.myrating}>
-            {/*등급 설명 및 원 그래프*/}
-            <Nav variant="tabs" defaultActiveKey="link0" className={styles["circle-result"]}>
-              {/*등분된 원들 클릭시 선택값에 따라 결과값 호출*/}
-              <RatingNav tab={tab}/>
-              {/*원 만드는 방법*/}
-              <Nav.Item className={styles.circle}>
-                  {/*원 5등분을 한 후 그에 맞게 탭으로 설정*/}
-                  <Nav.Link onClick={()=>{setTab(1)}} eventKey="link1" className={styles.slice}>
-                    <p className={styles["slice1"]}>S</p>
-                  </Nav.Link>
-                  <Nav.Link onClick={()=>{setTab(2)}} eventKey="link2" className={styles.slice}>
-                    <p className={styles["slice2"]}>T</p>
-                  </Nav.Link>
-                  <Nav.Link onClick={()=>{setTab(3)}} eventKey="link3" className={styles.slice}>
-                    <p className={styles["slice3"]}>Y</p>
-                  </Nav.Link>
-                  <Nav.Link onClick={()=>{setTab(4)}} eventKey="link4" className={styles.slice}>
-                    <p className={styles["slice4"]}>L</p>
-                  </Nav.Link>
-                  <Nav.Link onClick={()=>{setTab(5)}} eventKey="link5" className={styles.slice}>
-                    <p className={styles["slice5"]}>E</p>
-                  </Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </div>
-          {/*유의사항 전체*/}
-          <div className={styles["guide-precautions"]}>
-            {/*유의사항*/}
-            <p className={styles.precautions}>유의사항</p>
-            <div className={styles["guide-precautions-content"]}>
-              {/*첫 번째 쿠폰 이용 안내 문구*/}
-              <div className={styles["guide-content"]}>
-                <p className={styles.number}>1</p>
-                <p>회원 등급은 로그인, 마이페이지 접속시 갱신됩니다.</p>
-              </div>
-              {/*두 번째 쿠폰 이용 안내 문구*/}
-              <div className={styles["guide-content"]}>
-                <p className={styles.number}>2</p>
-                <p>등급을 부여받은 날짜 기준으로 3개월동안 결제 금액이 0원일 경우, 등급이 한단계 하락합니다.</p>
-              </div>
-              {/*세 번째 쿠폰 이용 안내 문구*/}
-              <div className={styles["guide-content"]}>
-                <p className={styles.number}>3</p>
-                <p>회원 등급 기준 및 혜택은 M.F.정책에 의해 변경될 수 있습니다.</p>
-              </div>
+    const gradeBenefits = {
+        S: (
+            <>
+                <h5>해당 등급은 가장 높은 등급으로, 감각적인 패션을 소유한 사람이라는 뜻입니다.</h5><br></br>
+                <p>• 3% 할인 적용</p>
+                <p>• 3% 적립 적용</p>
+                <p>• 10% 할인 쿠폰 1개, 15% 할인 쿠폰 1개 매월 정기적으로 지급</p>
+                <p>• 전체 주문 금액 100만원 이상 사용 시 적용되는 등급</p>
+            </>
+        ),
+        T: (
+            <>
+                <h5>해당 등급은 두 번째로 높은 등급으로, 유행을 잘 따라가는 사람이라는 뜻입니다.</h5><br></br>
+                <p>• 2% 할인 적용</p>
+                <p>• 2% 적립 적용</p>
+                <p>• 5% 할인 쿠폰 1개, 10% 할인 쿠폰 1개를 매월 정기적으로 지급</p>
+                <p>• 전체 주문 금액 60만원 이상 사용 시 적용되는 등급</p>
+            </>
+        ),
+        Y: (
+            <>
+                <h5>해당 등급은 세 번째로 높은 등급으로, 젊게 사는 사람이라는 뜻입니다.</h5><br></br>
+                <p>• 2% 할인 적용</p>
+                <p>• 2% 적립 적용</p>
+                <p>• 5% 할인 쿠폰 2개를 매월 정기적으로 지급</p>
+                <p>• 전체 주문 금액 30만원 이상 사용 시 적용되는 등급</p>
+            </>
+        ),
+        L: (
+            <>
+                <h5>해당 등급은 네 번째로 높은 등급으로, 패션을 배우고자 하는 사람이라는 뜻입니다.</h5><br></br>
+                <p>• 1% 할인 적용</p>
+                <p>• 1% 적립 적용</p>
+                <p>• 2% 할인 쿠폰 2개를 매월 정기적으로 지급</p>
+                <p>• 전체 주문 금액 10만원 이상 사용 시 적용되는 등급</p>
+            </>
+        ),
+        E: (
+            <>
+                <h5>해당 등급은 다섯 번째로 높은 등급으로, 패션을 즐기는 사람이라는 뜻입니다.</h5><br></br>
+                <p>• 1% 적립 적용</p>
+                <p>• 첫 가입 시 5% 할인 쿠폰 제공</p>
+                <p>• 첫 가입 시 적용되는 등급</p>
+            </>
+        ),
+    };
+
+    const handleGradeClick = (gradeLetter) => {
+        setSelectedGrade(gradeLetter);
+    };
+
+    return (
+        <div className={styles.container}>
+            <Header />
+            <div className={styles.gradeBox}>
+                <span>당신의 등급은 '{gradeDescriptions[grade]}' 등급입니다.</span>
             </div>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-}
+            <div className={styles.styleText}>
+                {Object.keys(gradeDescriptions).map((letter) => (
+                    <span
+                        key={letter}
+                        className={`${styles.letter} ${selectedGrade === letter ? styles.active : ''}`}
+                        onClick={() => handleGradeClick(letter)}
+                    >
+                        {letter}
+                    </span>
+                ))}
+            </div>
 
-export default Rating;
+            {selectedGrade && (
+                <div className={styles.benefitsBox}>
+                    <h3>{gradeDescriptions[selectedGrade]} 등급 혜택</h3>
+                    <div className={styles.benefitsContent}>{gradeBenefits[selectedGrade]}</div>
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default Rating1;

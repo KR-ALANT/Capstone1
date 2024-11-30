@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './MyCoupon.module.css';
-import Header from '../../header/Header.js'
+import Header from '../../header/Header.js';
+import Footer from '../../footer/Footer.js';
 
 const MyCoupon = () => {
 
@@ -88,6 +89,9 @@ const MyCoupon = () => {
           </div>
         </div>
       </main>
+      <div className={styles.footer}>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -23,13 +23,13 @@ const Header = () => {
                         <div className="menu-bottom">
                             <div className="shop">
                                 <span className="main-category">SHOP</span>
-                                <a href="#" className="sub-category">All</a>
-                                <a href="#" className="sub-category">Best</a>
-                                <a href="#" className="sub-category">New</a>
-                                <a href="#" className="sub-category">Outer</a>
-                                <a href="#" className="sub-category">Top</a>
-                                <a href="#" className="sub-category">Bottom</a>
-                                <a href="#" className="sub-category">Etc</a>
+                                <a href="/all" className="sub-category">All</a>
+                                <a href="/best" className="sub-category">Best</a>
+                                <a href="/new" className="sub-category">New</a>
+                                <a href="/outer" className="sub-category">Outer</a>
+                                <a href="/top" className="sub-category">Top</a>
+                                <a href="/bottom" className="sub-category">Bottom</a>
+                                <a href="/etc" className="sub-category">Etc</a>
                             </div>
                             <div className="company">
                                 <span className="main-category">Q&A</span>

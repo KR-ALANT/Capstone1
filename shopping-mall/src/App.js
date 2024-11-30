@@ -10,15 +10,23 @@ import Join from './join/Join';
 import Faq from './faq/Faq';
 import Cart from './cart/Cart';
 import Footer from './footer/Footer';
-import Rating from './mypage/rating/Rating'
-import Profile from './mypage/profile/Profile'
-import ForgotID from './login/forgotid/ForgotID'
-import ForgotPW from './login/forgotpw/ForgotPW'
-import FoundID from './login/foundid/FoundID'
-import FoundPW from './login/foundpw/FoundPW'
-import Order from './mypage/order/MyOrder'
-import Detail from './detail/Alldetail'
-import All from './preview/All'
+import Rating from './mypage/rating/Rating';
+import Profile from './mypage/profile/Profile';
+import ForgotID from './login/forgotid/ForgotID';
+import ForgotPW from './login/forgotpw/ForgotPW';
+import FoundID from './login/foundid/FoundID';
+import FoundPW from './login/foundpw/FoundPW';
+import Order from './mypage/order/MyOrder';
+import All from './preview/All';
+/*import Best from './preview/Best';
+import New from './preview/New';
+import Outer from './preview/Outer';
+import Top from './preview/Top';
+import Bottom from './preview/Bottom';
+import Etc from './preview/Etc';*/
+import Detail from './detail/Alldetail';
+import Wishlist from './mypage/wishlist/Wishlist'
+import Board from './mypage/board/Board'
 
 const App = () => {
     return (
@@ -40,8 +48,18 @@ const App = () => {
             <Route path="/footer" element={<Footer />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/order" element={<Order />} />
-            <Route path="/detail" element={<Detail />} />
             <Route path="/all" element={<All />} />
+            {/*
+            <Route path="/best" element={<Best />} />
+            <Route path="/new" element={<New />} />
+            <Route path="/outer" element={<Outer />} />
+            <Route path="/top" element={<Top />} />
+            <Route path="/bottom" element={<Bottom />} />
+            <Route path="/etc" element={<Etc />} />
+            */}
+            <Route path="/detail" element={<Detail />} />
+            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/board" element={<Board />} />
         </Routes>
     );
 };

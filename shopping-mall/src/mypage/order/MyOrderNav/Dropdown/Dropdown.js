@@ -25,6 +25,7 @@ const SelectBox = styled.div`
 const Label = styled.label`
   font-size: 14px;
   display: inline-block;
+  cursor: pointer;
 `;
 
 const SelectOptions = styled.ul`
@@ -72,7 +73,7 @@ export const Dropdown = (props) => {
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside); 
     return() => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
