@@ -8,6 +8,14 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [rememberId, setRememberId] = useState(false);
     
+    const Rest_api_key='8df619ab9ca578fc70a91c24ed57298b' //REST API KEY
+    const redirect_uri = 'http://localhost:3000' //Redirect URI
+    // oauth 요청 URL
+    const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${Rest_api_key}&redirect_uri=${redirect_uri}&response_type=code`
+    const handleLogin = ()=>{
+        window.location.href = kakaoURL
+    }
+
     const handleIdChange = (e) => {
         setId(e.target.value);
     };
@@ -75,7 +83,7 @@ const Login = () => {
                                     <div className={styles.login_button}>
                                         <p>LOGIN</p>
                                     </div>
-                                    <div className={styles.kakao_login_button}>
+                                    <div className={styles.kakao_login_button} onClick={handleLogin}>
                                         <p>KAKAO LOGIN</p>
                                     </div>
                                 </div>
