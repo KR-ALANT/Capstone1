@@ -92,7 +92,9 @@ const Login = () => {
                                 </div>
                             </div>
                             <div className={styles.create_account}>
-                                <p>CREATE AN ACCOUNT</p>
+                                <a href="/Join">
+                                    <p>CREATE AN ACCOUNT</p>
+                                </a>
                             </div>
                         </form>  
                     </div>   
