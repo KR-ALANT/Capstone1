@@ -17,6 +17,8 @@ import ForgotPW from './login/forgotpw/ForgotPW'
 import FoundID from './login/foundid/FoundID'
 import FoundPW from './login/foundpw/FoundPW'
 import Order from './mypage/order/MyOrder'
+import Detail from './detail/Alldetail'
+import All from './preview/All'
 
 const App = () => {
     return (
@@ -38,6 +40,8 @@ const App = () => {
             <Route path="/footer" element={<Footer />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/order" element={<Order />} />
+            <Route path="/detail" element={<Detail />} />
+            <Route path="/all" element={<All />} />
         </Routes>
     );
 };
