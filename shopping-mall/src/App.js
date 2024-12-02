@@ -18,15 +18,18 @@ import FoundID from './login/foundid/FoundID';
 import FoundPW from './login/foundpw/FoundPW';
 import Order from './mypage/order/MyOrder';
 import All from './preview/All';
-/*import Best from './preview/Best';
-import New from './preview/New';
 import Outer from './preview/Outer';
 import Top from './preview/Top';
 import Bottom from './preview/Bottom';
-import Etc from './preview/Etc';*/
+/*import Best from './preview/Best';
+import New from './preview/New';*/
+import Etc from './preview/Etc';
 import Detail from './detail/Alldetail';
 import Wishlist from './mypage/wishlist/Wishlist'
 import Board from './mypage/board/Board'
+
+
+
 
 const App = () => {
     return (
@@ -36,6 +39,8 @@ const App = () => {
             <Route path="/mypage" element={<Mypage />} />
             <Route path="/point" element={<Point />} />
             <Route path="/coupon" element={<Coupon />} />
+            <Route path="/wishlist" element={<Wishlist />} />
+            <Route path="/board" element={<Board />} />
             <Route path="/login" element={<Login />} />
             <Route path="/join" element={<Join />} />
             <Route path="/forgotid" element={<ForgotID />} />
@@ -49,17 +54,28 @@ const App = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/order" element={<Order />} />
             <Route path="/all" element={<All />} />
-            {/*
-            <Route path="/best" element={<Best />} />
-            <Route path="/new" element={<New />} />
             <Route path="/outer" element={<Outer />} />
             <Route path="/top" element={<Top />} />
             <Route path="/bottom" element={<Bottom />} />
             <Route path="/etc" element={<Etc />} />
+            {/*
+            <Route path="/best" element={<Best />} />
+            <Route path="/new" element={<New />} />
             */}
-            <Route path="/detail" element={<Detail />} />
-            <Route path="/wishlist" element={<Wishlist />} />
-            <Route path="/board" element={<Board />} />
+            
+            
+            <Route path="/detail/:id" element={<Detail />} />
+            <Route path="/outer/:id" element={<Detail />} />
+            <Route path="/top/:id" element={<Detail />} />
+            <Route path="/bottom/:id" element={<Detail />} />
+            <Route path="/etc/:id" element={<Detail />} />
+
+
+            
+
+        
+         
+   
         </Routes>
     );
 };

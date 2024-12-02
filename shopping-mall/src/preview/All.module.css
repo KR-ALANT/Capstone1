@@ -28,36 +28,51 @@ main{
     
 }
 
+.title {
+    font-size: 25px; /* 크기를 크게 설정 */
+    font-weight: bold; /* 두껍게 강조 */
+    text-align: center; /* 중앙 정렬 */
+    margin-bottom: 1rem; /* 하단 여백 추가 */
+    color: #333; /* 선명한 텍스트 색상 */
+    text-transform: uppercase; /* 대문자로 변환 */
+    letter-spacing: 0.1rem; /* 글자 간격 조정 */
+    margin-top: 20px;
+}
+
 /*상단 카테고리*/
 .all{
     flex-direction: column;
 }
-.listcategory {
+.tabContainer {
     display: flex;
-    flex-direction: flexbox; 
     justify-content: center;
     align-items: center;
-    margin-top: 80px; 
+    margin-top: 40px;
     gap: 50px;
     width: 100%;
 }
 
-.listword {
+.tabButton {
     text-decoration: none; /* 기본 밑줄 제거 */
     color: #000000; /* 글자 색상 */
     font-size: 18px; /* 글자 크기 */
-    letter-spacing: 2px; /* 자간을 2px로 설정 */
+    letter-spacing: 2px; /* 자간 설정 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 7px 20px; /* 버튼 여백 추가 */
+    transition: background-color 0.3s, color 0.3s; /* 애니메이션 효과 */
 }
 
-.listword.active {
+.tabButton.active {
     background-color: #e8e8e8; /* 하이라이터 색상 */
-    color: #000(0, 0, 0); /* 텍스트 색상 */
-    padding: 5px; /* 하이라이터 여백 */
+    color: rgb(0, 0, 0); /* 텍스트 색상 */
 }
 
-.listword:hover {
-    text-decoration: underline; 
+.tabButton:hover {
+    text-decoration: underline;
 }
+
 /* 상품목록 */
 .productlist {
     display: flex;
